@@ -1,5 +1,5 @@
 Gridless
-=============
+========
 
 Gridless is an HTML5 and CSS3, one web boilerplate to help you make progressively-enhanced, mobile first responsive websites/webapps that have beautiful typography with a vertical rhythm, sensible styles and are HTML5-ready and cross-browser compatible.
 
