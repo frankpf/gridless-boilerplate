@@ -53,7 +53,7 @@ FAQ
 ### Why the name **Gridless**? ###
 Because Gridless is gridless. It doesn't have any grid systems. The problem I see with most other CSS frameworks is that they have grid systems with presentational classes without any semantic.
 
-## What browsers are supported? ###
+### What browsers are supported? ###
 Gridless was tested in the following browsers:
 Mozilla Firefox 3.6+
 Opera 11+
