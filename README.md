@@ -24,11 +24,13 @@ License
 -------
 
 Major components:
+
 - HTML5 shim: [MIT][MIT] license
 - [Eric Meyer's CSS reset][eric css reset]: Public domain
 - [Respond.js][respondjs]: [MIT][MIT]/[GPLv2][GPL]
 
 Everything else:
+
 - [The Unlicense][Unlicense]
 
 Folder structure
