@@ -151,7 +151,7 @@ pre {
 	word-wrap: break-word;
 }
 pre, code, kbd, samp, tt {
-	font: 16px/1.625em Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace;
+	font: 1em/1.625em Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace;
 }
 
 /* Micro clearfix hack - http://nicolasgallagher.com/micro-clearfix-hack/
