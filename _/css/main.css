@@ -249,8 +249,3 @@ body {
 		page-break-after: avoid;
 	}
 }
-
-
-body {
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAaCAYAAAB2BDbRAAAAEElEQVQImWNgGEhwk4XrCAAEygGsuzqErAAAAABJRU5ErkJggg==');
-} /* DELETE THIS IF NOT WANTED */
