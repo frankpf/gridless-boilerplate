@@ -1,0 +1,251 @@
+/* Main stylesheet */
+
+/* Reset - Inspired by Eric Meyer's Reset: http://meyerweb.com/eric/tools/css/reset/
+---------------------------------------------------------------------------------------------------- */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
+	display: block;
+}
+audio, video, canvas {
+	display: inline-block;
+	*display: inline; /* IE7 and older */
+	*zoom: 1; /* IE7 and older */
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+abbr[title], dfn[title] {
+	border-bottom: 1px dotted #333;
+	cursor: help;
+}
+a img, :link img, :visited img {
+	border: none;
+}
+/* Improve IE's resizing of images - http://css-tricks.com/ie-fix-bicubic-scaling-for-images */
+img {
+	-ms-interpolation-mode: bicubic;
+}
+strong, b, dt, th {
+	font-weight: bold;
+}
+dfn {
+	font-style: italic;
+}
+var, address {
+	font-style: normal;
+}
+
+/* Base structure - Inspired by The 100% E2R Standard: http://www.informationarchitects.jp/en/100e2r/
+---------------------------------------------------------------------------------------------------- */
+body {
+	font: 16px/1.625 Georgia, serif;
+	*font-size: 1em; /* IE7 and older - IE can't resize px based text and most mobiles don't default the text to 16px */
+	color: #222; /* Black on white is too much contrast, #222 is a lot better */
+}
+p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, h4, h5, h6, img {
+	margin: 0 0 1.625em;
+}
+
+/* Headings/small
+---------------------------------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', 'FreeSerif', serif;
+
+}
+h1 {
+	font-size: 4.25em; /* 68px */
+	line-height: 1.1471em;
+	margin: 0 0 0.3824em;
+}
+h2 {
+	font-size: 2.625em; /* 42px */
+	line-height: 1.2381em;
+	margin: 0 0 0.619em;	
+}
+h3 {
+	font-size: 1.625em; /* 26px */
+	line-height: 1em;
+	margin: 0 0 1em;
+}
+h4, h5, h6 {
+	font-size: 1em;
+}
+small {
+	font-size: 0.625em; /* 10px */
+	margin: 0 0 2.6em;
+}
+
+/* Tables
+---------------------------------------------------------------------------------------------------- */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th {
+	text-align: left;
+}
+tr, th, td {
+	padding-right: 1.625em;
+	border-bottom: 0 solid #333;
+}
+
+/* Quotes
+---------------------------------------------------------------------------------------------------- */
+blockquote, q, cite {
+	font-style: italic;
+}
+blockquote {
+	padding-left: 1.625em;
+	border-left: 3px solid #ccc;
+}
+blockquote > p {
+	padding: 0;
+}
+
+/* Lists
+---------------------------------------------------------------------------------------------------- */
+ul, ol {
+	list-style-position: inside;
+}
+li ul, li ol {
+	margin: 0 1.625em;
+}
+dl dd {
+	margin-left: 1.625em;
+}
+
+/* Hyperlinks
+---------------------------------------------------------------------------------------------------- */
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+/* Better CSS outline suppression: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {
+	outline: none;
+}
+
+/* Code
+---------------------------------------------------------------------------------------------------- */
+/* Allows line wrapping of <pre> */
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+pre, code, kbd, samp, tt {
+	font: 1em/1.625em Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace;
+}
+
+/* Micro clearfix hack - http://nicolasgallagher.com/micro-clearfix-hack/
+---------------------------------------------------------------------------------------------------- */
+.cf:before, 
+.cf:after { 
+	content: ""; 
+	display: table; 
+}
+.cf:after { 
+	clear: both; 
+}
+.cf { 
+	*zoom: 1;
+}
+
+/* Default (mobile) styles
+---------------------------------------------------------------------------------------------------- */
+/* Centering pages without a wrapper - http://www.camendesign.com/code/developpeurs_sans_frontieres */
+html {
+	height: 100%;
+	background: none;
+	overflow-y: scroll; /* Force a scrollbar in non-IE */
+	-webkit-text-size-adjust: 100%; /* Remove iOS text size adjust without disabling user zoom */
+}
+body {
+	min-height: 100%;
+	width: 92%;
+	margin: 0 auto;
+}
+
+/* Wide mobile devices styles - Inherits from mobile styles
+---------------------------------------------------------------------------------------------------- */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	body {
+		
+	}
+}/*/mediaquery*/
+
+/* Tablets/netbooks styles - Inherits from mobile styles
+---------------------------------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1023px) { 
+	body {
+		
+	}
+}/*/mediaquery*/
+
+/* Desktop devices styles - Inherits from mobile styles
+---------------------------------------------------------------------------------------------------- */
+@media only screen and (min-width: 1024px) { 
+	body {
+
+	}
+}/*/mediaquery*/
+
+/* Print styles - Adapted from HTML5 Boilerplate's print styles
+---------------------------------------------------------------------------------------------------- */
+@media print {
+	* {
+		background: transparent !important;
+		color: black !important; /* The woes of CSS color in print typography: sanbeiji.com/archives/953 */
+		text-shadow: none !important;
+		filter: none !important;
+		-ms-filter: none !important;
+	}
+	a, a:visited {
+		color: #333 !important;
+		text-decoration: underline;
+	}
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+	/* Do not show javascript and internal links */
+	a[href^="javascript:"]:after, a[href^="#"]:after {
+		content: ""; 
+	}
+	/* Printing Tables: css-discuss.incutio.com/wiki/Printing_Tables */
+	thead {
+		display: table-header-group;
+	}
+	tr, img {
+		page-break-inside: avoid;
+	}
+	@page {
+		margin: 0.5cm;
+	}
+	p, h2, h3 {
+		orphans: 3;
+		widows: 3;
+	}
+	h2, h3{
+		page-break-after: avoid;
+	}
+}
