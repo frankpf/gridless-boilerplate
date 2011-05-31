@@ -53,8 +53,12 @@ FAQ
 ---
 
 ### Why the name **Gridless**? ###
+<<<<<<< HEAD
 Because Gridless is ...well, gridless. It doesn't have any grid systems. The problem with most other CSS frameworks is that they include grid systems with presentational classes and/or ids without any semantic. Classes and ids should be unique to each project and shouldn't be declared on pre-made documents.
 CSS grid systems should be used for rapid prototyping (which they're awesome at), not on production.
+=======
+Because Gridless is gridless. It doesn't have any grid systems. The problem with most other CSS frameworks is that they have grid systems with presentational classes without any semantic. Classes and IDs are unique characteristics of each project, and shouldn't be pre-made documents. Also, grid systems were mainly designed for rapid prototyping - and there's no problem in using them for that -, not for production.
+>>>>>>> bfc25c3c7b7fab9efd8ee5807561f17929a33508
 
 ### What browsers are supported? ###
 Gridless was tested in the following browsers:
