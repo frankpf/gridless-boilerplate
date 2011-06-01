@@ -65,7 +65,6 @@ p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldse
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 	font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', 'FreeSerif', serif;
-
 }
 h1 {
 	font-size: 4.25em; /* 68px */
@@ -133,9 +132,11 @@ dl dd {
 ---------------------------------------------------------------------------------------------------- */
 a {
 	text-decoration: none;
+	color: #BA0000;
 }
 a:hover {
-	text-decoration: underline;
+	color: maroon;
+	border-bottom: 1px solid maroon;
 }
 /* Better CSS outline suppression: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active {
@@ -149,6 +150,13 @@ pre {
 	white-space: pre;
 	white-space: pre-wrap;
 	word-wrap: break-word;
+	background: #222;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
+	color: white;
+	padding: 26px;
 }
 pre, code, kbd, samp, tt {
 	font: 1em/1.625em Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace;
@@ -179,15 +187,24 @@ html {
 }
 body {
 	min-height: 100%;
-	width: 92%;
-	margin: 0 auto;
+	width: 100%;
+}
+#main-header {
+	text-align: center;
+	margin-top: 1.625em;
+}
+#intro {
+	font-size: 1.625em;
+	border-top: 1px solid #222;
+	border-bottom: 1px solid #222;
 }
 
 /* Wide mobile devices styles - Inherits from mobile styles
 ---------------------------------------------------------------------------------------------------- */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	body {
-		
+		margin: 0 auto;
+		width: 70%;
 	}
 }/*/mediaquery*/
 
@@ -195,7 +212,8 @@ body {
 ---------------------------------------------------------------------------------------------------- */
 @media only screen and (min-width: 768px) and (max-width: 1023px) { 
 	body {
-		
+		margin: 0 auto;
+		width: 50%;
 	}
 }/*/mediaquery*/
 
@@ -203,7 +221,8 @@ body {
 ---------------------------------------------------------------------------------------------------- */
 @media only screen and (min-width: 1024px) { 
 	body {
-
+		margin: 0 auto;
+		width: 50%;
 	}
 }/*/mediaquery*/
 
@@ -249,8 +268,3 @@ body {
 		page-break-after: avoid;
 	}
 }
-
-
-body {
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAaCAYAAAB2BDbRAAAAEElEQVQImWNgGEhwk4XrCAAEygGsuzqErAAAAABJRU5ErkJggg==');
-} /* DELETE THIS IF NOT WANTED */
