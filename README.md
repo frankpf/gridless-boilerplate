@@ -47,6 +47,7 @@ Folder structure
 
 Thanks
 ------
+
 [Eric Meyer](http://meyerweb.com), [Scott Jehl](http://www.scottjehl.com/), [Jeremy Keith](http://adactio.com/), [Ethan Marcotte](http://ethanmarcotte.com/), [Oliver Reichenstein](http://www.informationarchitects.jp/), [Wilson Miner](http://www.wilsonminer.com/), [Bryan Rieger](http://yiibu.com/), [Paul Irish](http://paulirish.com/), [Harry Roberts](http://csswizardry.com/), [Nicolas Gallagher](http://nicolasgallagher.com/), [Mathias Bynens](http://mathiasbynens.be), [Luke Wroblewski](http://www.lukew.com/), [Kroc Camen](http://camendesign.com/), [Chris Coyier](http://css-tricks.com/), [Richard Rutter](http://clagnut.com/), [Remy Sharp](http://remysharp.com/) and many others.
 
 FAQ
@@ -56,7 +57,9 @@ FAQ
 Because Gridless is ...well, gridless. It doesn't have any grid systems. The problem with most other CSS frameworks is that they include grid systems with presentational classes and/or ids without any semantic. Classes and ids should be unique to each project and shouldn't be declared on pre-made documents.
 CSS grid systems should be used for rapid prototyping (which they're awesome at), not for production.
 
-### What browsers are supported? ###
+Browser support
+---------------
+
 Gridless was tested in the following browsers:
 Mozilla Firefox 3.6+
 Opera 11+
@@ -70,7 +73,7 @@ Although some of these browsers are very recent, Gridless should work in any mod
 Contributing
 ------------
 
-If you'd like to contribute to Gridless, visit https://github.com/thatcoolguy/gridless-boilerplate and send a pull request or an issue.
+If you'd like to contribute to Gridless, visit https://github.com/thatcoolguy/gridless-boilerplate and send a pull request or an issue. You can also fork the project or clone it. Do anything, it's open-source!
 
 [MIT]: http://www.opensource.org/licenses/mit-license.php
 [Unlicense]: http://unlicense.org/
