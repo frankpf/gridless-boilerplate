@@ -135,42 +135,11 @@ a {
 	color: #BA0000;
 }
 a:hover {
-	color: maroon;
-	border-bottom: 1px solid maroon;
+	text-decoration: underline;
 }
 /* Better CSS outline suppression: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active {
 	outline: none;
-}
-
-/* Buttons
----------------------------------------------------------------------------------------------------- */
-button {
-	font-family: Helvetica, Arial, sans-serif;
-	padding: 26px;
-	color: white;
-	background-color: #222;
-	border-radius: 20px;
-	border: 1px solid #222;
-	width: 300px;
-	font-size: 1.625em;
-}
-button:active, button:focus {
-	position: relative;
-	top: 2px;
-	background-color: #333;
-	text-shadow: 1px 1px 20px white;
-}
-
-/* CSS3 decoration
----------------------------------------------------------------------------------------------------- */
-button, pre {
-	-moz-border-radius: 20px;
-	-moz-box-shadow: inset 1px 1px 50px black;
-	-khtml-border-radius: 20px;
-	-khtml-box-shadow: inset 1px 1px 50px black;
-	border-radius: 20px;
-	box-shadow: inset 1px 1px 50px black;
 }
 
 /* Code
@@ -180,11 +149,7 @@ pre {
 	white-space: pre;
 	white-space: pre-wrap;
 	word-wrap: break-word;
-	background: #222;
-	color: white;
-	padding: 26px;
 }
-
 pre, code, kbd, samp, tt {
 	font: 1em/1.625em Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace;
 }
@@ -217,26 +182,11 @@ body {
 	width: 92%;
 	margin: 0 auto;
 }
-#main-header {
-	text-align: center;
-	margin-top: 1.625em;
-}
-#main-header ul {
-	display: none;
-	list-style: none;
-	text-align: left;
-}
-#intro {
-	font-size: 1.625em;
-	border-top: 1px solid #222;
-	border-bottom: 1px solid #222;
-}
 
 /* Wide mobile devices styles - Inherits from mobile styles
 ---------------------------------------------------------------------------------------------------- */
 @media only screen and (min-width: 480px) {
 	body {
-		width: 70%;
 	}
 }/*/mediaquery*/
 
@@ -244,20 +194,6 @@ body {
 ---------------------------------------------------------------------------------------------------- */
 @media only screen and (min-width: 768px) { 
 	body {
-		width: 50%;
-	}
-	#main-header ul {
-		display: block;
-		position: fixed;
-		left: 30px;
-		top: 200px;
-		border-top: 1px solid #BA0000;
-	}
-	#main-header li {
-		border-bottom: 1px solid #BA0000;
-	}
-	nav a:hover {
-		border: none;
 	}
 }/*/mediaquery*/
 
@@ -265,10 +201,6 @@ body {
 ---------------------------------------------------------------------------------------------------- */
 @media only screen and (min-width: 1024px) { 
 	body {
-		width: 50%;
-	}
-	nav {
-		font-size: 1.625em;
 	}
 }/*/mediaquery*/
 
