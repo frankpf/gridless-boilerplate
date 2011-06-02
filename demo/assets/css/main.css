@@ -12,7 +12,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
 	display: block;
 }
-audio, video, canvas {
+audio[controls], video, canvas {
 	display: inline-block;
 	*display: inline; /* IE7 and older */
 	*zoom: 1; /* IE7 and older */
