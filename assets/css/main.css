@@ -145,26 +145,26 @@ a:hover, a:active {
 
 /* Buttons
 ---------------------------------------------------------------------------------------------------- */
-button {
+#demo a {
 	font-family: Helvetica, Arial, sans-serif;
 	padding: 26px;
 	color: white;
-	background-color: #222;
+	background-color: #333;
 	border-radius: 20px;
 	border: 1px solid #222;
 	width: 300px;
 	font-size: 1.625em;
 }
-button:active, button:focus {
+#demo a:active, #demo a:focus {
 	position: relative;
 	top: 2px;
-	background-color: #333;
-	text-shadow: 1px 1px 20px white;
+	background-color: #555;
+	text-shadow: 1px 1px 10px maroon, 1px 0px 50px maroon;
 }
 
 /* CSS3 decoration
 ---------------------------------------------------------------------------------------------------- */
-button, pre {
+#demo a, pre {
 	-moz-border-radius: 20px;
 	-moz-box-shadow: inset 1px 1px 50px black;
 	-khtml-border-radius: 20px;
