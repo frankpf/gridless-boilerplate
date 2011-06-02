@@ -238,7 +238,7 @@ body {
 	body {
 		width: 70%;
 	}
-}/*/mediaquery*/
+}
 
 /* Tablets/netbooks styles - Inherits from mobile styles
 ---------------------------------------------------------------------------------------------------- */
@@ -259,7 +259,7 @@ body {
 	nav a:hover {
 		border: none;
 	}
-}/*/mediaquery*/
+}
 
 /* Desktop devices styles - Inherits from mobile styles
 ---------------------------------------------------------------------------------------------------- */
@@ -270,7 +270,7 @@ body {
 	nav {
 		font-size: 1.625em;
 	}
-}/*/mediaquery*/
+}
 
 /* Print styles - Adapted from HTML5 Boilerplate's print styles
 ---------------------------------------------------------------------------------------------------- */
