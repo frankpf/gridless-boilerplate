@@ -1,7 +1,7 @@
 /* Main stylesheet */
 
 /* Reset - Inspired by Eric Meyer's Reset: http://meyerweb.com/eric/tools/css/reset/
----------------------------------------------------------------------------------------------------- */
+------------------------------------------------------------------------------------------ */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -35,7 +35,7 @@ abbr[title], dfn[title] {
 a img, :link img, :visited img {
 	border: none;
 }
-/* Improve IE's resizing of images - http://css-tricks.com/ie-fix-bicubic-scaling-for-images */
+/* Improve IE's resizing of images: http://css-tricks.com/ie-fix-bicubic-scaling-for-images */
 img {
 	-ms-interpolation-mode: bicubic;
 }
@@ -49,11 +49,11 @@ var, address {
 	font-style: normal;
 }
 
-/* Base structure - Inspired by The 100% E2R Standard: http://www.informationarchitects.jp/en/100e2r/
----------------------------------------------------------------------------------------------------- */
+/* Base structure - Inspired by 100E2R: http://www.informationarchitects.jp/en/100e2r/
+------------------------------------------------------------------------------------------ */
 body {
 	font: 16px/1.625 Georgia, serif;
-	*font-size: 1em; /* IE7 and older - IE can't resize px based text and most mobiles don't default the text to 16px */
+	*font-size: 1em; /* IE7 and older: IE can't resize px based text and most mobiles don't default the text to 16px */
 	color: #222; /* Black on white is too much contrast, #222 is a lot better */
 }
 p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, h4, h5, h6, img {
@@ -61,7 +61,7 @@ p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldse
 }
 
 /* Headings/small
----------------------------------------------------------------------------------------------------- */
+------------------------------------------------------------------------------------------ */
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 	font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', 'FreeSerif', serif;
@@ -91,7 +91,7 @@ small {
 }
 
 /* Tables
----------------------------------------------------------------------------------------------------- */
+------------------------------------------------------------------------------------------ */
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -105,7 +105,7 @@ tr, th, td {
 }
 
 /* Quotes
----------------------------------------------------------------------------------------------------- */
+------------------------------------------------------------------------------------------ */
 blockquote, q, cite {
 	font-style: italic;
 }
@@ -118,7 +118,7 @@ blockquote > p {
 }
 
 /* Lists
----------------------------------------------------------------------------------------------------- */
+------------------------------------------------------------------------------------------ */
 ul, ol {
 	list-style-position: inside;
 }
@@ -130,7 +130,7 @@ dl dd {
 }
 
 /* Hyperlinks
----------------------------------------------------------------------------------------------------- */
+------------------------------------------------------------------------------------------ */
 a {
 	text-decoration: none;
 }
@@ -143,7 +143,7 @@ a:hover, a:active {
 }
 
 /* Code
----------------------------------------------------------------------------------------------------- */
+------------------------------------------------------------------------------------------ */
 /* Allows line wrapping of <pre> */
 pre {
 	white-space: pre;
@@ -154,8 +154,8 @@ pre, code, kbd, samp, tt {
 	font: 1em/1.625em Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace;
 }
 
-/* Micro clearfix hack - http://nicolasgallagher.com/micro-clearfix-hack/
----------------------------------------------------------------------------------------------------- */
+/* Micro clearfix hack: http://nicolasgallagher.com/micro-clearfix-hack/
+------------------------------------------------------------------------------------------ */
 .cf:before, 
 .cf:after { 
 	content: ""; 
@@ -169,8 +169,8 @@ pre, code, kbd, samp, tt {
 }
 
 /* Default (mobile) styles
----------------------------------------------------------------------------------------------------- */
-/* Centering pages without a wrapper - http://www.camendesign.com/code/developpeurs_sans_frontieres */
+------------------------------------------------------------------------------------------ */
+/* Centering pages without a wrapper: http://www.camendesign.com/code/developpeurs_sans_frontieres */
 html {
 	height: 100%;
 	background: none;
@@ -184,7 +184,7 @@ body {
 }
 
 /* Wide mobile devices styles - Inherits from mobile styles
----------------------------------------------------------------------------------------------------- */
+------------------------------------------------------------------------------------------ */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	body {
 		
@@ -192,7 +192,7 @@ body {
 }
 
 /* Tablets/netbooks styles - Inherits from mobile styles
----------------------------------------------------------------------------------------------------- */
+------------------------------------------------------------------------------------------ */
 @media only screen and (min-width: 768px) and (max-width: 1023px) { 
 	body {
 		
@@ -200,7 +200,7 @@ body {
 }
 
 /* Desktop devices styles - Inherits from mobile styles
----------------------------------------------------------------------------------------------------- */
+------------------------------------------------------------------------------------------ */
 @media only screen and (min-width: 1024px) { 
 	body {
 
@@ -208,7 +208,7 @@ body {
 }
 
 /* Print styles - Adapted from HTML5 Boilerplate's print styles
----------------------------------------------------------------------------------------------------- */
+------------------------------------------------------------------------------------------ */
 @media print {
 	* {
 		background: transparent !important;
