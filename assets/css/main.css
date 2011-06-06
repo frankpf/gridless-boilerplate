@@ -1,14 +1,12 @@
-/* Main stylesheet */
+/*
+	Main stylesheet: contains CSS normalization, base styles, typography with a vertical rhythm and some mobile-first media queries
 
-/* Reset - Inspired by Eric Meyer's Reset: http://meyerweb.com/eric/tools/css/reset/
----------------------------------------------------------------------------------------------------- */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-}
+	Credit is left where credit is due
+	Much ispiration was taken from the normalize.css project: http://necolas.github.com/normalize.css/
+*/
+
+/* `HTML5 elements display-role
+---------------------------------------- */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
 	display: block;
 }
@@ -17,51 +15,30 @@ audio[controls], video, canvas {
 	*display: inline; /* IE7 and older */
 	*zoom: 1; /* IE7 and older */
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after, q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-abbr[title], dfn[title] {
-	border-bottom: 1px dotted #333;
-	cursor: help;
-}
-a img, :link img, :visited img {
-	border: none;
-}
-/* Improve IE's resizing of images - http://css-tricks.com/ie-fix-bicubic-scaling-for-images */
-img {
-	-ms-interpolation-mode: bicubic;
-}
-strong, b, dt, th {
-	font-weight: bold;
-}
-dfn {
-	font-style: italic;
-}
-var, address {
-	font-style: normal;
-}
 
-/* Base structure - Inspired by The 100% E2R Standard: http://www.informationarchitects.jp/en/100e2r/
----------------------------------------------------------------------------------------------------- */
+/* `Base structure
+---------------------------------------- */
+html {
+	height: 100%;
+	font-size: 100%;
+	overflow-y: scroll; /* Force a scrollbar in non-IE */
+	-webkit-text-size-adjust: 100%; /* Remove iOS text size adjust without disabling user zoom */
+}
 body {
+	margin: 0;
+	min-height: 100%;
+}
+body, button, input, select, textarea {
 	font: 16px/1.625 Georgia, serif;
-	*font-size: 1em; /* IE7 and older - IE can't resize px based text and most mobiles don't default the text to 16px */
+	*font-size: 1em; /* IE7 and older: IE can't resize px based text and most mobiles don't default the text to 16px */
 	color: #222; /* Black on white is too much contrast, #222 is a lot better */
 }
 p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, h4, h5, h6, img {
 	margin: 0 0 1.625em;
 }
 
-/* Headings/small
----------------------------------------------------------------------------------------------------- */
+/* `Headings and small
+---------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 	font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', 'FreeSerif', serif;
@@ -89,8 +66,8 @@ small {
 	margin: 0 0 2.6em;
 }
 
-/* Tables
----------------------------------------------------------------------------------------------------- */
+/* `Tables
+---------------------------------------- */
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -100,11 +77,21 @@ th {
 }
 tr, th, td {
 	padding-right: 1.625em;
-	border-bottom: 0 solid #333;
+	border-bottom: 1px solid #333;
 }
 
-/* Quotes
----------------------------------------------------------------------------------------------------- */
+/* `Forms
+---------------------------------------- */
+form {
+	margin: 0;
+}
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+
+/* `Quotes
+---------------------------------------- */
 blockquote, q, cite {
 	font-style: italic;
 }
@@ -116,10 +103,11 @@ blockquote > p {
 	padding: 0;
 }
 
-/* Lists
----------------------------------------------------------------------------------------------------- */
+/* `Lists
+---------------------------------------- */
 ul, ol {
 	list-style-position: inside;
+	padding: 0;
 }
 li ul, li ol {
 	margin: 0 1.625em;
@@ -128,53 +116,96 @@ dl dd {
 	margin-left: 1.625em;
 }
 
-/* Hyperlinks
----------------------------------------------------------------------------------------------------- */
+/* `Hyperlinks
+---------------------------------------- */
 a {
 	text-decoration: none;
 	color: #BA0000;
 }
 a:hover {
+	text-decoration: none;
 	color: maroon;
-	border-bottom: 1px solid maroon;
+}
+a:focus {
+	outline: thin dotted;
 }
 /* Better CSS outline suppression: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active {
 	outline: none;
 }
-
-/* Buttons
----------------------------------------------------------------------------------------------------- */
-#demo a {
+#demo p {
 	font-family: Helvetica, Arial, sans-serif;
 	padding: 26px;
+	width: auto;
 	color: white;
 	background-color: #333;
 	border-radius: 20px;
 	border: 1px solid #222;
-	width: 300px;
 	font-size: 1.625em;
+	text-align: center;
+	
 }
-#demo a:active, #demo a:focus {
+#demo p:active, #demo p:focus {
 	position: relative;
 	top: 2px;
 	background-color: #555;
 	text-shadow: 1px 1px 10px maroon, 1px 0px 50px maroon;
 }
 
-/* CSS3 decoration
----------------------------------------------------------------------------------------------------- */
-#demo a, pre {
-	-moz-border-radius: 20px;
-	-moz-box-shadow: inset 1px 1px 50px black;
-	-khtml-border-radius: 20px;
-	-khtml-box-shadow: inset 1px 1px 50px black;
-	border-radius: 20px;
-	box-shadow: inset 1px 1px 50px black;
+/* `Figures and images
+---------------------------------------- */
+figure {
+	margin: 0;
+}
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic; /* Improve IE's resizing of images: http://css-tricks.com/ie-fix-bicubic-scaling-for-images */
 }
 
-/* Code
----------------------------------------------------------------------------------------------------- */
+/* `Abbreviations
+---------------------------------------- */
+abbr[title], dfn[title] {
+	border-bottom: 1px dotted #333;
+	cursor: help;
+}
+
+/* `Marked/inserted and deleted text
+---------------------------------------- */
+mark, ins {
+	background: #ff0;
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* `Others
+---------------------------------------- */
+strong, b, dt, th {
+	font-weight: bold;
+}
+dfn {
+	font-style: italic;
+}
+var, address {
+	font-style: normal;
+}
+/* Position <sub> and <sup> without affecting line-height: gist.github.com/413930 */
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+
+/* `Code
+---------------------------------------- */
 /* Allows line wrapping of <pre> */
 pre {
 	white-space: pre;
@@ -189,8 +220,19 @@ pre, code, kbd, samp, tt {
 	font: 1em/1.625em Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace;
 }
 
-/* Micro clearfix hack - http://nicolasgallagher.com/micro-clearfix-hack/
----------------------------------------------------------------------------------------------------- */
+/* `CSS3 decoration
+---------------------------------------- */
+#demo p, pre {
+	-moz-border-radius: 20px;
+	-moz-box-shadow: inset 1px 1px 50px black;
+	-khtml-border-radius: 20px;
+	-khtml-box-shadow: inset 1px 1px 50px black;
+	border-radius: 20px;
+	box-shadow: inset 1px 1px 50px black;
+}
+
+/* `Clearfix hack: http://nicolasgallagher.com/micro-clearfix-hack/
+---------------------------------------- */
 .cf:before, 
 .cf:after { 
 	content: ""; 
@@ -203,17 +245,13 @@ pre, code, kbd, samp, tt {
 	*zoom: 1;
 }
 
-/* Default (mobile) styles
----------------------------------------------------------------------------------------------------- */
+/* `Default (mobile) styles
+---------------------------------------- */
 /* Centering pages without a wrapper - http://www.camendesign.com/code/developpeurs_sans_frontieres */
 html {
-	height: 100%;
 	background: none;
-	overflow-y: scroll; /* Force a scrollbar in non-IE */
-	-webkit-text-size-adjust: 100%; /* Remove iOS text size adjust without disabling user zoom */
 }
 body {
-	min-height: 100%;
 	width: 92%;
 	margin: 0 auto;
 }
@@ -232,16 +270,16 @@ body {
 	border-bottom: 1px solid #222;
 }
 
-/* Wide mobile devices styles - Inherits from mobile styles
----------------------------------------------------------------------------------------------------- */
+/* `Wide mobile devices styles
+---------------------------------------- */
 @media only screen and (min-width: 480px) {
 	body {
 		width: 70%;
 	}
 }
 
-/* Tablets/netbooks styles - Inherits from mobile styles
----------------------------------------------------------------------------------------------------- */
+/* `Tablets/netbooks styles
+---------------------------------------- */
 @media only screen and (min-width: 768px) { 
 	body {
 		width: 50%;
@@ -249,6 +287,7 @@ body {
 	#main-header ul {
 		display: block;
 		position: fixed;
+		_position: absolute; /* IE6 only: IE6 doesn't support "position: fixed", so we define "position: absolute" as a fallback */
 		left: 30px;
 		top: 200px;
 		border-top: 1px solid #BA0000;
@@ -259,10 +298,13 @@ body {
 	nav a:hover {
 		border: none;
 	}
+	#demo p {
+		width: 40%;
+	}
 }
 
-/* Desktop devices styles - Inherits from mobile styles
----------------------------------------------------------------------------------------------------- */
+/* Desktop devices styles
+---------------------------------------- */
 @media only screen and (min-width: 1024px) { 
 	body {
 		width: 50%;
@@ -272,8 +314,8 @@ body {
 	}
 }
 
-/* Print styles - Adapted from HTML5 Boilerplate's print styles
----------------------------------------------------------------------------------------------------- */
+/* Print styles
+---------------------------------------- */
 @media print {
 	* {
 		background: transparent !important;
