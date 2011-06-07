@@ -28,7 +28,7 @@ body {
 	margin: 0;
 	min-height: 100%;
 }
-body, button, input, select, textarea {
+body {
 	font: 16px/1.625 Georgia, serif;
 	*font-size: 1em; /* IE7 and older: IE can't resize px based text and most mobiles don't default the text to 16px */
 	color: #222; /* Black on white is too much contrast, #222 is a lot better */
@@ -100,6 +100,28 @@ form {
 textarea {
 	overflow: auto;
 	vertical-align: top;
+}
+/* Same font settings as body */
+button, input, select, textarea {
+	font: 1em/1.625em Georgia, serif;
+	color: #222;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+	appearance: button;
+}
+input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+}
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
 }
 
 /* `Quotes
