@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		
-		<title>Gridless demo</title>
+		<title></title>
 
 		<!-- Meta tags -->
 		<meta name="description" content="" />
@@ -21,8 +21,15 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<script src="assets/js/respond.min.js"></script>
+		<style>
+			#boxsize button, #boxsize input, #boxsize select, #boxsize textarea {
+				width: 200px;
+				border: 1px solid #333;
+			}
+		</style>
 	</head>
-	<body> 
+	<body>
+		<!-- Demo content taken from the normalize.css project: http://necolas.github.com/normalize.css/ -->
 		<header>
 			<hgroup>
 				<h1>Grouped Heading 1</h1>
@@ -30,9 +37,9 @@
 			</hgroup>
 			<nav>
 				<ul>
-					<li><a href="#">navigation item #1</a></li>
-					<li><a href="#">navigation item #2</a></li>
-					<li><a href="#">navigation item #3</a></li>
+					<li><a href="#1">navigation item #1</a></li>
+					<li><a href="#2">navigation item #2</a></li>
+					<li><a href="#3">navigation item #3</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -163,7 +170,7 @@
 		<h3>figure</h3>
 		
 		<figure>
-			<img src="http://placehold.it/100x200" alt="">
+			<img src="http://placehold.it/1000x200" alt="">
 			<figcaption>Figcaption content</figcaption>
 		</figure>
 		<blockquote>lol</blockquote>
