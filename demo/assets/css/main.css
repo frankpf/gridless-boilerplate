@@ -97,6 +97,9 @@ tr, th, td {
 form {
 	margin: 0;
 }
+fieldset {
+	border: 0;
+}
 textarea {
 	overflow: auto;
 	vertical-align: top;
