@@ -11,7 +11,7 @@ Main features
 - [Responsive][responsive] (responds to the user's device screen width with the correct content and CSS)
 - Progressive enhancement, [mobile first][mobile first]
 - Cross-browser compatible (even IE6 and 7)
-- A reset stylesheet so you have a great building base
+- CSS normalization instead of CSS reset
 - A vertical rhythm
 - Print styles optimized for performance
 - Optimal caching
