@@ -255,7 +255,7 @@ body {
 
 /* Wide mobile devices styles
 ---------------------------------------- */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) {
 	body {
 		
 	}
@@ -263,7 +263,7 @@ body {
 
 /* Tablets/netbooks styles
 ---------------------------------------- */
-@media only screen and (min-width: 768px) and (max-width: 1023px) { 
+@media only screen and (min-width: 768px) { 
 	body {
 		
 	}
