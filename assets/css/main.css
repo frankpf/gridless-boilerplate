@@ -68,7 +68,7 @@ small {
 
 /* `Code
 ---------------------------------------- */
-/* Allows line wrapping of <pre> */
+/* Allows line wrapping of 'pre' */
 pre {
 	white-space: pre;
 	white-space: pre-wrap;
@@ -214,7 +214,7 @@ dfn {
 var, address {
 	font-style: normal;
 }
-/* Position <sub> and <sup> without affecting line-height: gist.github.com/413930 */
+/* Position 'sub' and 'sup' without affecting line-height: gist.github.com/413930 */
 sub, sup {
 	font-size: 75%;
 	line-height: 0;
