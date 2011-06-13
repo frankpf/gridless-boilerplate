@@ -26,7 +26,7 @@ License
 Major components:
 
 - HTML5 shim: [MIT][MIT] license
-- [Eric Meyer's CSS reset][eric css reset]: Public domain
+- [Nicolas Gallagher's Normalize.css][normalize]: Public domain
 - [Respond.js][respondjs]: [MIT][MIT]/[GPLv2][GPL]
 
 Everything else:
@@ -37,7 +37,7 @@ Folder structure
 ----------------
 
 - **index.html**: The HTML page with the initial markup
-- **_/** *(folder)*: The folder that includes all the assets
+- **assets/** *(folder)*: The folder that includes all the assets
 	- **css/** *(folder)*: The folder that includes all the CSS files
 		- **main.css**: The main CSS file with basic styles and media queries
 	- **fonts/** *(empty folder)*: The folder where your webfonts reside
@@ -48,7 +48,7 @@ Folder structure
 Thanks
 ------
 
-[Eric Meyer](http://meyerweb.com), [Scott Jehl](http://www.scottjehl.com/), [Jeremy Keith](http://adactio.com/), [Ethan Marcotte](http://ethanmarcotte.com/), [Oliver Reichenstein](http://www.informationarchitects.jp/), [Wilson Miner](http://www.wilsonminer.com/), [Bryan Rieger](http://yiibu.com/), [Paul Irish](http://paulirish.com/), [Harry Roberts](http://csswizardry.com/), [Nicolas Gallagher](http://nicolasgallagher.com/), [Mathias Bynens](http://mathiasbynens.be), [Luke Wroblewski](http://www.lukew.com/), [Kroc Camen](http://camendesign.com/), [Chris Coyier](http://css-tricks.com/), [Richard Rutter](http://clagnut.com/), [Remy Sharp](http://remysharp.com/) and many others.
+[Ethan Marcotte](http://ethanmarcotte.com/), [Bryan Rieger](http://yiibu.com/), [Luke Wroblewski](http://www.lukew.com/), [Jeremy Keith](http://adactio.com/), [Paul Irish](http://paulirish.com/), [Nicolas Gallagher](http://nicolasgallagher.com/), [Scott Jehl](http://www.scottjehl.com/), [Eric Meyer](http://meyerweb.com), [Oliver Reichenstein](http://www.informationarchitects.jp/), [Wilson Miner](http://www.wilsonminer.com/), [Harry Roberts](http://csswizardry.com/), [Mathias Bynens](http://mathiasbynens.be), [Kroc Camen](http://camendesign.com/), [Chris Coyier](http://css-tricks.com/), [Richard Rutter](http://clagnut.com/), [Remy Sharp](http://remysharp.com/), [Kilian Valkhof](kilianvalkhof.com) and many others.
 
 FAQ
 ---
@@ -84,5 +84,5 @@ If you'd like to contribute to Gridless, visit https://github.com/thatcoolguy/gr
 [safe CSS hacks]: http://mathiasbynens.be/notes/safe-css-hacks
 [clearfix]: http://nicolasgallagher.com/micro-clearfix-hack/
 [respondjs]: https://github.com/scottjehl/Respond
-[eric css reset]: http://meyerweb.com/eric/tools/css/reset/
+[normalize]: http://meyerweb.com/eric/tools/css/reset/
 [100E2R]: http://www.informationarchitects.jp/en/100e2r/
