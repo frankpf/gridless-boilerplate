@@ -26,7 +26,7 @@ License
 Major components:
 
 - HTML5 shim: [MIT][MIT] license
-- [Normalize.css][normalize]: MIT license
+- [Normalize.css][normalize]: [MIT][MIT] license
 - [Respond.js][respondjs]: [MIT][MIT]/[GPLv2][GPL]
 
 Everything else:
