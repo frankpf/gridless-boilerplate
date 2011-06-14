@@ -263,7 +263,7 @@ sub {
 	*zoom: 1;
 }
 
-/* Default (mobile) styles
+/* `Default (mobile) styles
 ---------------------------------------- */
 /* Centering pages without a wrapper: http://www.camendesign.com/code/developpeurs_sans_frontieres */
 /* The body will work like a 'div#wrapper': add the background of the page to the 'html' tag and the background of the wrapper to the 'body' tag */
@@ -272,7 +272,7 @@ body {
 	margin: 0 auto;
 }
 
-/* Wide mobile devices styles
+/* `Wide mobile devices styles
 ---------------------------------------- */
 @media only screen and (min-width: 480px) {
 	body {
@@ -280,7 +280,7 @@ body {
 	}
 }
 
-/* Tablets/netbooks styles
+/* `Tablets/netbooks styles
 ---------------------------------------- */
 @media only screen and (min-width: 768px) { 
 	body {
@@ -288,7 +288,7 @@ body {
 	}
 }
 
-/* Desktop devices styles
+/* `Desktop devices styles
 ---------------------------------------- */
 @media only screen and (min-width: 1024px) { 
 	body {
@@ -296,7 +296,7 @@ body {
 	}
 }
 
-/* Print styles
+/* `Print styles
 ---------------------------------------- */
 @media print {
 	* {
