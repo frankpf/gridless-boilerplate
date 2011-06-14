@@ -2,7 +2,7 @@
 	Main stylesheet: contains CSS normalization, base styles, typography with a vertical rhythm and some mobile-first media queries
 
 	Credit is left where credit is due
-	Much ispiration was taken from the normalize.css project: http://necolas.github.com/normalize.css/
+	Much content and inspiration was taken from the normalize.css project: http://necolas.github.com/normalize.css/ and https://github.com/jonathantneal/normalize.css
 */
 
 /* `HTML5 elements display-role
@@ -27,8 +27,12 @@ html {
 body {
 	margin: 0;
 	min-height: 100%;
+	font: 16px/1.625 Georgia, serif;
+	*font-size: 1em; /* IE7 and older: IE can't resize px based text and most mobiles don't default the text to 16px */
+	color: #222; /* Black on white is too much contrast, #222 is a lot better */
 }
-body {
+/* Font settings */
+body, button, input, select, textarea {
 	font: 16px/1.625 Georgia, serif;
 	*font-size: 1em; /* IE7 and older: IE can't resize px based text and most mobiles don't default the text to 16px */
 	color: #222; /* Black on white is too much contrast, #222 is a lot better */
@@ -68,13 +72,13 @@ small {
 
 /* `Code
 ---------------------------------------- */
-/* Allows line wrapping of <pre> */
+/* Allows line wrapping of 'pre' */
 pre {
 	white-space: pre;
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
-pre, code, kbd, samp, tt {
+pre, code, kbd, samp {
 	font: 1em/1.625em Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace;
 }
 
@@ -99,20 +103,29 @@ form {
 }
 fieldset {
 	border: 0;
+	padding: 0;
 }
 textarea {
 	overflow: auto;
 	vertical-align: top;
 }
-/* Same font settings as body */
+legend {
+	*margin-left: -7px;
+}
+
 button, input, select, textarea {
 	font: 1em/1.625em Georgia, serif;
 	color: #222;
+	vertical-align: baseline;
+	*vertical-align: middle; /* IE7 and older */
+}
+button, input {
+	line-height: normal;
+	*overflow: visible;
 }
 button, input[type="button"], input[type="reset"], input[type="submit"] {
 	cursor: pointer;
 	-webkit-appearance: button;
-	appearance: button;
 }
 input[type="checkbox"], input[type="radio"] {
 	box-sizing: border-box;
@@ -125,6 +138,10 @@ input[type="search"] {
 }
 input[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
 }
 
 /* `Quotes
@@ -195,9 +212,14 @@ abbr[title], dfn[title] {
 
 /* `Marked/inserted and deleted text
 ---------------------------------------- */
-mark, ins {
-	background: #ff0;
+ins, mark {
 	text-decoration: none;
+}
+mark {
+	background: #ff0;
+}
+ins {
+	background: #ff9;
 }
 del {
 	text-decoration: line-through;
@@ -205,7 +227,7 @@ del {
 
 /* `Others
 ---------------------------------------- */
-strong, b, dt, th {
+strong, b, dt {
 	font-weight: bold;
 }
 dfn {
@@ -214,9 +236,9 @@ dfn {
 var, address {
 	font-style: normal;
 }
-/* Position <sub> and <sup> without affecting line-height: gist.github.com/413930 */
+/* Position 'sub' and 'sup' without affecting line-height: gist.github.com/413930 */
 sub, sup {
-	font-size: 75%;
+	font-size: 0.625em;
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
@@ -244,18 +266,15 @@ sub {
 /* Default (mobile) styles
 ---------------------------------------- */
 /* Centering pages without a wrapper: http://www.camendesign.com/code/developpeurs_sans_frontieres */
-html {
-	background: none;
-}
+/* The body will work like a 'div#wrapper': add the background of the page to the 'html' tag and the background of the wrapper to the 'body' tag */
 body {
-	background: none;
 	width: 92%;
 	margin: 0 auto;
 }
 
 /* Wide mobile devices styles
 ---------------------------------------- */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) {
 	body {
 		
 	}
@@ -263,7 +282,7 @@ body {
 
 /* Tablets/netbooks styles
 ---------------------------------------- */
-@media only screen and (min-width: 768px) and (max-width: 1023px) { 
+@media only screen and (min-width: 768px) { 
 	body {
 		
 	}
