@@ -266,11 +266,8 @@ sub {
 /* Default (mobile) styles
 ---------------------------------------- */
 /* Centering pages without a wrapper: http://www.camendesign.com/code/developpeurs_sans_frontieres */
-html {
-	background: none;
-}
+/* The body will work like a 'div#wrapper': add the background of the page to the 'html' tag and the background of the wrapper to the 'body' tag */
 body {
-	background: none;
 	width: 92%;
 	margin: 0 auto;
 }
