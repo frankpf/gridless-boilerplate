@@ -10,11 +10,6 @@
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
 	display: block;
 }
-audio[controls], video, canvas {
-	display: inline-block;
-	*display: inline; /* IE7 and older */
-	*zoom: 1; /* IE7 and older */
-}
 
 /* `Base structure
 ---------------------------------------- */
