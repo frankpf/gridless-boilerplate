@@ -143,14 +143,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
-
-pre, #demo p {
-	padding: 26px;
-	color: white;
-	background-color: #333;
-	border-radius: 20px;
-	border: 1px solid #222;
-}
 #demo p {
 	font-family: Helvetica, Arial, sans-serif;
 	width: auto;
@@ -165,6 +157,11 @@ pre, #demo p {
 	text-shadow: 1px 1px 10px maroon, 1px 0px 50px maroon;
 }
 #demo p, pre {
+	padding: 26px;
+	color: white;
+	background-color: #333;
+	border-radius: 20px;
+	border: 1px solid #222;
 	-moz-border-radius: 20px;
 	-moz-box-shadow: inset 1px 1px 50px black;
 	-khtml-border-radius: 20px;
