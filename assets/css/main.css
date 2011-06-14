@@ -2,7 +2,7 @@
 	Main stylesheet: contains CSS normalization, base styles, typography with a vertical rhythm and some mobile-first media queries
 
 	Credit is left where credit is due
-	Much ispiration was taken from the normalize.css project: http://necolas.github.com/normalize.css/
+	Much content and inspiration was taken from the normalize.css project: http://necolas.github.com/normalize.css/ and https://github.com/jonathantneal/normalize.css
 */
 
 /* `HTML5 elements display-role
@@ -27,7 +27,11 @@ html {
 body {
 	margin: 0;
 	min-height: 100%;
+	font: 16px/1.625 Georgia, serif;
+	*font-size: 1em; /* IE7 and older: IE can't resize px based text and most mobiles don't default the text to 16px */
+	color: #222; /* Black on white is too much contrast, #222 is a lot better */
 }
+/* Font settings */
 body, button, input, select, textarea {
 	font: 16px/1.625 Georgia, serif;
 	*font-size: 1em; /* IE7 and older: IE can't resize px based text and most mobiles don't default the text to 16px */
@@ -66,6 +70,18 @@ small {
 	margin: 0 0 2.6em;
 }
 
+/* `Code
+---------------------------------------- */
+/* Allows line wrapping of 'pre' */
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+pre, code, kbd, samp {
+	font: 1em/1.625em Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace;
+}
+
 /* `Tables
 ---------------------------------------- */
 table {
@@ -85,13 +101,87 @@ tr, th, td {
 form {
 	margin: 0;
 }
+fieldset {
+	border: 0;
+	padding: 0;
+}
 textarea {
 	overflow: auto;
 	vertical-align: top;
 }
+legend {
+	*margin-left: -7px;
+}
+
+button, input, select, textarea {
+	font: 1em/1.625em Georgia, serif;
+	color: #222;
+	vertical-align: baseline;
+	*vertical-align: middle; /* IE7 and older */
+}
+button, input {
+	line-height: normal;
+	*overflow: visible;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+}
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+pre, #demo p {
+	padding: 26px;
+	color: white;
+	background-color: #333;
+	border-radius: 20px;
+	border: 1px solid #222;
+}
+#demo p {
+	font-family: Helvetica, Arial, sans-serif;
+	width: auto;
+	font-size: 1.625em;
+	text-align: center;
+	
+}
+#demo p:active, #demo p:focus {
+	position: relative;
+	top: 2px;
+	background-color: #555;
+	text-shadow: 1px 1px 10px maroon, 1px 0px 50px maroon;
+}
+#demo p, pre {
+	-moz-border-radius: 20px;
+	-moz-box-shadow: inset 1px 1px 50px black;
+	-khtml-border-radius: 20px;
+	-khtml-box-shadow: inset 1px 1px 50px black;
+	border-radius: 20px;
+	box-shadow: inset 1px 1px 50px black;
+}
 
 /* `Quotes
 ---------------------------------------- */
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
 blockquote, q, cite {
 	font-style: italic;
 }
@@ -133,24 +223,6 @@ a:focus {
 a:hover, a:active {
 	outline: none;
 }
-#demo p {
-	font-family: Helvetica, Arial, sans-serif;
-	padding: 26px;
-	width: auto;
-	color: white;
-	background-color: #333;
-	border-radius: 20px;
-	border: 1px solid #222;
-	font-size: 1.625em;
-	text-align: center;
-	
-}
-#demo p:active, #demo p:focus {
-	position: relative;
-	top: 2px;
-	background-color: #555;
-	text-shadow: 1px 1px 10px maroon, 1px 0px 50px maroon;
-}
 
 /* `Figures and images
 ---------------------------------------- */
@@ -171,9 +243,14 @@ abbr[title], dfn[title] {
 
 /* `Marked/inserted and deleted text
 ---------------------------------------- */
-mark, ins {
-	background: #ff0;
+ins, mark {
 	text-decoration: none;
+}
+mark {
+	background: #ff0;
+}
+ins {
+	background: #ff9;
 }
 del {
 	text-decoration: line-through;
@@ -181,7 +258,7 @@ del {
 
 /* `Others
 ---------------------------------------- */
-strong, b, dt, th {
+strong, b, dt {
 	font-weight: bold;
 }
 dfn {
@@ -190,9 +267,9 @@ dfn {
 var, address {
 	font-style: normal;
 }
-/* Position <sub> and <sup> without affecting line-height: gist.github.com/413930 */
+/* Position 'sub' and 'sup' without affecting line-height: gist.github.com/413930 */
 sub, sup {
-	font-size: 75%;
+	font-size: 0.625em;
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
@@ -202,47 +279,6 @@ sup {
 }
 sub {
 	bottom: -0.25em;
-}
-
-/* `Code
----------------------------------------- */
-/* Allows line wrapping of <pre> */
-pre {
-	white-space: pre;
-	white-space: pre-wrap;
-	word-wrap: break-word;
-	background: #222;
-	color: white;
-	padding: 26px;
-}
-
-pre, code, kbd, samp, tt {
-	font: 1em/1.625em Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace;
-}
-
-/* `CSS3 decoration
----------------------------------------- */
-#demo p, pre {
-	-moz-border-radius: 20px;
-	-moz-box-shadow: inset 1px 1px 50px black;
-	-khtml-border-radius: 20px;
-	-khtml-box-shadow: inset 1px 1px 50px black;
-	border-radius: 20px;
-	box-shadow: inset 1px 1px 50px black;
-}
-
-/* `Clearfix hack: http://nicolasgallagher.com/micro-clearfix-hack/
----------------------------------------- */
-.cf:before, 
-.cf:after { 
-	content: ""; 
-	display: table; 
-}
-.cf:after { 
-	clear: both; 
-}
-.cf { 
-	*zoom: 1;
 }
 
 /* `Default (mobile) styles
@@ -269,6 +305,7 @@ body {
 	border-top: 1px solid #222;
 	border-bottom: 1px solid #222;
 }
+
 /* `Wide mobile devices styles
 ---------------------------------------- */
 @media only screen and (min-width: 480px) {
@@ -279,7 +316,7 @@ body {
 		background: url('https://d3nwyuy0nl342s.cloudfront.net/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67');
 		text-indent: -9999px;
 		position: fixed;
-		*position: absolute;
+		_position: absolute; /* IE6 only */
 		height: 149px;
 		width: 149px;
 		top: 0;
