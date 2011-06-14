@@ -26,7 +26,7 @@ License
 Major components:
 
 - HTML5 shim: [MIT][MIT] license
-- [Normalize.css][normalize]: [MIT][MIT] license
+- [Normalize.css][normalize]: Public domain
 - [Respond.js][respondjs]: [MIT][MIT]/[GPLv2][GPL]
 
 Everything else:
@@ -84,5 +84,5 @@ If you'd like to contribute to Gridless, visit https://github.com/thatcoolguy/gr
 [safe CSS hacks]: http://mathiasbynens.be/notes/safe-css-hacks
 [clearfix]: http://nicolasgallagher.com/micro-clearfix-hack/
 [respondjs]: https://github.com/scottjehl/Respond
-[normalize]: http://meyerweb.com/eric/tools/css/reset/
+[normalize]: http://necolas.github.com/normalize.css/
 [100E2R]: http://www.informationarchitects.jp/en/100e2r/
