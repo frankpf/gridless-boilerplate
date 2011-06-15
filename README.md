@@ -12,7 +12,7 @@ Main features
 - Progressive enhancement, [mobile first][mobile first]
 - Cross-browser compatible (even IE6 and 7)
 - CSS normalization instead of CSS reset
-- A vertical rhythm
+- Beautiful typography with a vertical rhythm and heading sizes based on golden ratio
 - Print styles optimized for performance
 - Optimal caching
 - HTML5 and CSS3 ready
