@@ -188,10 +188,15 @@ a:hover, a:active {
 	outline: none;
 }
 
-/* `Figures and images
+/* `Visual media
 ---------------------------------------- */
 figure {
 	margin: 0;
+}
+img, object, embed, video {
+	max-width: 100%; /* Consider this first: http://unstoppablerobotninja.com/entry/fluid-images/ */
+	width: 100%;
+	/* *width: width_of_the_imagepx; /* Do this if the image is larger than the container. Since IE doesn't support max-width, it'll get the absolute width. Nice, huh? */
 }
 img {
 	border: 0;
@@ -258,7 +263,7 @@ sub {
 	*zoom: 1;
 }
 
-/* Default (mobile) styles
+/* `Default (mobile) styles
 ---------------------------------------- */
 /* Centering pages without a wrapper: http://www.camendesign.com/code/developpeurs_sans_frontieres */
 /* The body will work like a 'div#wrapper': add the background of the page to the 'html' tag and the background of the wrapper to the 'body' tag */
@@ -267,7 +272,7 @@ body {
 	margin: 0 auto;
 }
 
-/* Wide mobile devices styles
+/* `Wide mobile devices styles
 ---------------------------------------- */
 @media only screen and (min-width: 480px) {
 	body {
@@ -275,7 +280,7 @@ body {
 	}
 }
 
-/* Tablets/netbooks styles
+/* `Tablets/netbooks styles
 ---------------------------------------- */
 @media only screen and (min-width: 768px) { 
 	body {
@@ -283,7 +288,7 @@ body {
 	}
 }
 
-/* Desktop devices styles
+/* `Desktop devices styles
 ---------------------------------------- */
 @media only screen and (min-width: 1024px) { 
 	body {
@@ -291,7 +296,7 @@ body {
 	}
 }
 
-/* Print styles
+/* `Print styles
 ---------------------------------------- */
 @media print {
 	* {
@@ -302,7 +307,7 @@ body {
 		-ms-filter: none !important;
 	}
 	a, a:visited {
-		color: #333 !important;
+		color: #222 !important;
 		text-decoration: underline;
 	}
 	a[href]:after {
