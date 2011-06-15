@@ -54,15 +54,13 @@ Make it better
 - Use a [CSS lint tool](http://csslint.net/) and an [HTML5 lint tool](http://lint.brihten.com/) for better styles and markup
 - Use [microdata](http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#microdata) for better search results and semantic markup
 - If you'd like help people move off IE6, add this HTML to your body:  
-<pre>
-<code>
+```
 <!--[if lt IE 7]>
 <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'>
 	<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a>
 </div>
 <![endif]-->
-</code>
-</pre>
+```
 
 FAQ
 ---
