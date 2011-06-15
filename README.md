@@ -1,7 +1,7 @@
 Gridless
 ========
 
-Gridless is an HTML5 and CSS3, [one web][one web] boilerplate to help you make progressively-enhanced, [mobile first][mobile first] [responsive][responsive] websites/webapps that have [beautiful typography][100E2R] with a vertical rhythm, sensible styles and are HTML5-ready and cross-browser compatible.
+Gridless is an HTML5 and CSS3, [one web][one web] boilerplate to help you make progressively-enhanced, [mobile first][mobile first] [responsive][responsive] websites/webapps that have [beautiful typography][100E2R] with a [vertical rhythm][vertical rhythm], sensible styles and are HTML5-ready and cross-browser compatible.
 
 Gridless is simple and isn't littered with pre-defined non-semantic silly classes or pre-made grid systems.
 
@@ -55,7 +55,7 @@ FAQ
 
 ### Why the name **Gridless**? ###
 Because Gridless is ...well, gridless. It doesn't have any grid systems. The problem with most other CSS frameworks is that they include grid systems with presentational classes and/or ids without any semantic. Classes and ids should be unique to each project and shouldn't be declared on pre-made documents.
-CSS grid systems should be used for rapid prototyping (which they're awesome at), not for production.
+Still, if you don't agree with that, just include your favorite grid system (only the grid part, remove the reset, typography etc.) and it'll work like a charm!
 
 Browser support
 ---------------
@@ -86,3 +86,4 @@ If you'd like to contribute to Gridless, visit https://github.com/thatcoolguy/gr
 [respondjs]: https://github.com/scottjehl/Respond
 [normalize]: http://necolas.github.com/normalize.css/
 [100E2R]: http://www.informationarchitects.jp/en/100e2r/
+[vertical rhythm]: http://24ways.org/2006/compose-to-a-vertical-rhythm
