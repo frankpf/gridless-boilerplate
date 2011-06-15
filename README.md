@@ -20,42 +20,6 @@ Main features
 - [Micro clearfix hack] [clearfix]
 - A well-organized folder structure
 
-License
--------
-
-Major components:
-
-- HTML5 shim: [MIT][MIT] license
-- [Normalize.css][normalize]: Public domain
-- [Respond.js][respondjs]: [MIT][MIT]/[GPLv2][GPL]
-
-Everything else:
-
-- [The Unlicense][Unlicense]
-
-Folder structure
-----------------
-
-- **index.html**: The HTML page with the initial markup
-- **assets/** *(folder)*: The folder that includes all the assets
-	- **css/** *(folder)*: The folder that includes all the CSS files
-		- **main.css**: The main CSS file with basic styles and media queries
-	- **fonts/** *(empty folder)*: The folder where your webfonts reside
-	- **img/** *(empty folder)*: The folder where your images reside
-	- **js/** *(folder)*: The folder that includes all the JavaScript files
-		- **respond.min.js**: Respond.js, which is a polyfill for media queries on older browsers
-
-Thanks
-------
-
-[Ethan Marcotte](http://ethanmarcotte.com/), [Bryan Rieger](http://yiibu.com/), [Luke Wroblewski](http://www.lukew.com/), [Jeremy Keith](http://adactio.com/), [Paul Irish](http://paulirish.com/), [Nicolas Gallagher](http://nicolasgallagher.com/), [Jonathan Neal](https://github.com/jonathantneal/), [Scott Jehl](http://www.scottjehl.com/), [Eric Meyer](http://meyerweb.com), [Oliver Reichenstein](http://www.informationarchitects.jp/), [Wilson Miner](http://www.wilsonminer.com/), [Harry Roberts](http://csswizardry.com/), [Mathias Bynens](http://mathiasbynens.be), [Kroc Camen](http://camendesign.com/), [Chris Coyier](http://css-tricks.com/), [Richard Rutter](http://clagnut.com/), [Remy Sharp](http://remysharp.com/), [Kilian Valkhof](kilianvalkhof.com) and many others.
-
-FAQ
----
-
-### Why the name **Gridless**? ###
-Because Gridless is ...well, gridless. It doesn't have any grid systems. The problem with most other CSS frameworks is that they include grid systems with presentational classes and/or ids without any semantic. Classes and ids should be unique to each project and shouldn't be declared on pre-made documents.
-Still, if you don't agree with that, just include your favorite grid system (only the grid part, remove the reset, typography etc.) and it'll work like a charm!
 
 Browser support
 ---------------
@@ -69,6 +33,59 @@ Internet Explorer 6+
 
 Although some of these browsers are very recent, Gridless should work in any modern browser without problems.
 
+Folder structure
+----------------
+
+- **index.html**: The HTML page with the initial markup
+- **assets/** *(folder)*: The folder that includes all the assets
+	- **css/** *(folder)*: The folder that includes all the CSS files
+		- **main.css**: The main CSS file with basic styles and media queries
+	- **fonts/** *(empty folder)*: The folder where your webfonts reside
+	- **img/** *(empty folder)*: The folder where your images reside
+	- **js/** *(folder)*: The folder that includes all the JavaScript files
+		- **respond.min.js**: Respond.js, which is a polyfill for media queries on older browsers
+
+Make it better
+--------------
+
+- Use [HTML5 polyfills](http://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills) to bring future to all browsers
+- [Use more `meta` tags inside your `head`](http://gist.github.com/581868)
+- Write [efficient CSS](http://css-tricks.com/efficiently-rendering-css/) for better browser performance
+- Use a [CSS lint tool](http://csslint.net/) and an [HTML5 lint tool](http://lint.brihten.com/) for better styles and markup
+- Use [microdata](http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#microdata) for better search results and semantic markup
+- If you'd like help people move off IE6, add this HTML to your body:  
+```html
+<!--[if lt IE 7]>
+<div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'>
+	<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a>
+</div>
+<![endif]-->
+```
+
+FAQ
+---
+
+### Why the name **Gridless**? ###
+Because Gridless is ...well, gridless. It doesn't have any grid systems. The problem with most other CSS frameworks is that they include grid systems with presentational classes and/or ids without any semantic. Classes and ids should be unique to each project and shouldn't be declared on pre-made documents.
+Still, if you don't agree with that, just include your favorite grid system (only the grid part, remove the reset, typography etc.) and it'll work like a charm!
+
+License
+-------
+
+Major components:
+
+- HTML5 shim: [MIT][MIT] license
+- [Normalize.css][normalize]: Public domain
+- [Respond.js][respondjs]: [MIT][MIT]/[GPLv2][GPL]
+
+Everything else:
+
+- [The Unlicense][Unlicense]
+
+Thanks
+------
+
+[Ethan Marcotte](http://ethanmarcotte.com/), [Bryan Rieger](http://yiibu.com/), [Luke Wroblewski](http://www.lukew.com/), [Jeremy Keith](http://adactio.com/), [Paul Irish](http://paulirish.com/), [Nicolas Gallagher](http://nicolasgallagher.com/), [Jonathan Neal](https://github.com/jonathantneal/), [Scott Jehl](http://www.scottjehl.com/), [Eric Meyer](http://meyerweb.com), [Oliver Reichenstein](http://www.informationarchitects.jp/), [Wilson Miner](http://www.wilsonminer.com/), [Harry Roberts](http://csswizardry.com/), [Mathias Bynens](http://mathiasbynens.be), [Kroc Camen](http://camendesign.com/), [Chris Coyier](http://css-tricks.com/), [Richard Rutter](http://clagnut.com/), [Remy Sharp](http://remysharp.com/), [Kilian Valkhof](kilianvalkhof.com) and many others.
 
 Contributing
 ------------
