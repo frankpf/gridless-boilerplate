@@ -188,13 +188,15 @@ a:hover, a:active {
 	outline: none;
 }
 
-/* `Figures and images
+/* `Visual media
 ---------------------------------------- */
 figure {
 	margin: 0;
 }
-img {
+img, object, embed, video {
 	max-width: 100%; /* Consider this first: http://unstoppablerobotninja.com/entry/fluid-images/ */
+}
+img {
 	border: 0;
 	-ms-interpolation-mode: bicubic; /* Improve IE's resizing of images: http://css-tricks.com/ie-fix-bicubic-scaling-for-images */
 }
