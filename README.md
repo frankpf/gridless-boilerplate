@@ -51,7 +51,7 @@ Make it better
 - Use [HTML5 polyfills](http://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills) to bring future to all browsers
 - [Use more `meta` tags inside your `head`](http://gist.github.com/581868)
 - Write [efficient CSS](http://css-tricks.com/efficiently-rendering-css/) for better browser performance
-- Use a [CSS lint tool](http://csslint.net/) and an [HTML5 lint tool](http://lint.brihten.com/) for better styles and markup
+- Use an [HTML5 lint tool](http://lint.brihten.com/) for better markup
 - Use [microdata](http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#microdata) for better search results and semantic markup
 - If you'd like help people move off IE6, add this HTML to your body:  
 ```
