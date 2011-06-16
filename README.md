@@ -49,6 +49,9 @@ Make it better
 --------------
 
 - Use [HTML5 polyfills](http://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills) to bring future to all browsers
+- Use a tool like [resizeMyBrowser](http://resizemybrowser.com/) or [ProtoFluid](http://protofluid.com/) for testing your responsive designs on common browser widths
+- Consider using [CSS3 Please!](http://css3please.com/) and [CSSPrefixer](http://cssprefixer.appspot.com/) to help you write faster CSS3
+- Use a script loader like [yepnope.js](http://yepnopejs.com/) or [HeadJS](http://headjs.com/) to load your scripts faster and without blocking
 - [Use more `meta` tags inside your `head`](http://gist.github.com/581868)
 - Write [efficient CSS](http://css-tricks.com/efficiently-rendering-css/) for better browser performance
 - Use an [HTML5 lint tool](http://lint.brihten.com/) for better markup
