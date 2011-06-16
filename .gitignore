@@ -1,0 +1,23 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+
+# OS or Editor folders
+.DS_Store
+.cache
+.project
+.settings
+nbproject
+Thumbs.db
+
+# Folders to ignore
+.hg
+.svn
+.idea
