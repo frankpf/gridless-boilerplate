@@ -35,7 +35,7 @@ p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldse
 
 /* `Headings and small
 ---------------------------------------- */
-/* Font sizes are based on the golden ratio of 16. See this for the modular scale: http://ow.ly/5jGl6. Line-heights and margins are adjusted to keep a 26px (1.625em) vertical rhythm across all elements. If you'd like to use other font-sizes, see http://drewish.com/tools/vertical-rhythm and http://modularscale.com */
+/* Font sizes are based on the golden ratio of 16. See this for the modular scale: http://ow.ly/5jGl6. Line-heights and margins are adjusted to keep a 26px (1.625em) vertical rhythm across all elements */
 h1, h2, h3, h4, h5, h6 {
 	font-size: 1em;
 	font-weight: bold;

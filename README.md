@@ -56,7 +56,8 @@ Make it better
 - Write [efficient CSS](http://css-tricks.com/efficiently-rendering-css/) for better browser performance
 - Use an [HTML5 lint tool](http://lint.brihten.com/) for better markup
 - Use [microdata](http://www.whatwg.org/specs/web-apps/current-work/multipage/links.html#microdata) for better search results and semantic markup
-- If you'd like help people move off IE6, add this HTML to your body:  
+- If you'd like to use font-sizes outside the default modular scale (1.625), see http://drewish.com/tools/vertical-rhythm and http://modularscale.com
+- If you'd like help people move off IE6 with an warning, add this HTML to your body:  
 ```
 <!--[if lt IE 7]>
 <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'>
