@@ -190,7 +190,7 @@ figure {
 img, object, embed, video {
 	max-width: 100%; /* Consider this first: http://unstoppablerobotninja.com/entry/fluid-images/ */
 	width: 100%;
-	/* *width: width_of_the_imagepx; /* Do this if the image is larger than the container. Since IE doesn't support max-width, it'll get the absolute width. Nice, huh? */
+	/* *width: width_of_the_imagepx; /* Do this if the image is smaller than the container. Since IE doesn't support max-width, it'll get the absolute width. Nice, huh? */
 }
 img {
 	border: 0;
