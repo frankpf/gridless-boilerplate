@@ -1,22 +1,22 @@
 Gridless
 ========
 
-Gridless is an HTML5 and CSS3, [one web][one web] boilerplate to help you make progressively-enhanced, [mobile first][mobile first] [responsive][responsive] websites/webapps that have [beautiful typography][100E2R] with a [vertical rhythm][vertical rhythm], sensible styles and are HTML5-ready and cross-browser compatible.
+Gridless is an HTML5 and CSS3, [one web](http://adactio.com/journal/1716/) boilerplate to help you make progressively-enhanced, [mobile first](http://www.lukew.com/ff/entry.asp?933) [responsive](http://www.alistapart.com/articles/responsive-web-design) websites/webapps that have [beautiful typography](http://www.informationarchitects.jp/en/100e2r/) with a [vertical rhythm](http://24ways.org/2006/compose-to-a-vertical-rhythm), sensible styles and are HTML5-ready and cross-browser compatible.
 
 Gridless is simple and isn't littered with pre-defined non-semantic silly classes or pre-made grid systems.
 
 Main features
 -------------
 
-- [Responsive][responsive] (responds to the user's device screen width with the correct content and CSS)
-- Progressive enhancement, [mobile first][mobile first]
+- [Responsive](http://www.alistapart.com/articles/responsive-web-design) (responds to the user's device screen width with the correct content and CSS)
+- Progressive enhancement, [mobile first](http://www.lukew.com/ff/entry.asp?933)
 - Cross-browser compatible (even IE6 and 7)
 - CSS normalization instead of CSS reset
 - Beautiful typography with a vertical rhythm and heading sizes based on golden ratio
 - Print styles optimized for performance
 - Optimal caching
 - HTML5 and CSS3 ready
-- [Safe CSS hacks][safe CSS hacks] instead of conditional classnames/stylesheets
+- [Safe CSS hacks](http://mathiasbynens.be/notes/safe-css-hacks) instead of conditional classnames/stylesheets
 - [Micro clearfix hack] [clearfix]
 - A well-organized folder structure
 
@@ -78,13 +78,13 @@ License
 
 Major components:
 
-- HTML5 shim: [MIT][MIT] license
-- [Normalize.css][normalize]: Public domain
-- [Respond.js][respondjs]: [MIT][MIT]/[GPLv2][GPL]
+- HTML5 shim: [MIT](http://www.opensource.org/licenses/mit-license.php) license
+- [Normalize.css](http://necolas.github.com/normalize.css/): Public domain
+- [Respond.js](https://github.com/scottjehl/Respond): [MIT](http://www.opensource.org/licenses/mit-license.php)/[GPLv2](http://www.gnu.org/licenses/gpl-2.0.html)
 
 Everything else:
 
-- [The Unlicense][Unlicense]
+- [The Unlicense](http://unlicense.org/)
 
 Thanks
 ------
@@ -96,9 +96,6 @@ Contributing
 
 If you'd like to contribute to Gridless, visit https://github.com/thatcoolguy/gridless-boilerplate and send a pull request or an issue. You can also fork the project or clone it. Do anything, it's open-source!
 
-[MIT]: http://www.opensource.org/licenses/mit-license.php
-[Unlicense]: http://unlicense.org/
-[GPL]: http://www.gnu.org/licenses/gpl-2.0.html
 [one web]: http://adactio.com/journal/1716/
 [mobile first]: http://www.lukew.com/ff/entry.asp?933
 [responsive]: http://www.alistapart.com/articles/responsive-web-design
