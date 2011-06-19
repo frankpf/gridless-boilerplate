@@ -76,7 +76,7 @@ h1 {
 h2 {
 	font-size: 2.625em; /* 42px */
 	line-height: 1.2381em;
-	margin: 0 0 0.619em;	
+	margin: 0 0 0.619em;
 }
 h3 {
 	font-size: 1.625em; /* 26px */
@@ -286,8 +286,8 @@ body {
 #demo p, #main-header h1 {
 	text-align: center;
 }
-#demo p, #intro {
-	font-size: 1.625em;
+#demo p, #intro p {
+	font-size: 1.625em; /* 26px */
 	line-height: 1em;
 	margin: 0 0 1em;
 }
@@ -308,7 +308,7 @@ body {
 	-khtml-box-shadow: inset 1px 1px 50px black;
 	box-shadow: inset 1px 1px 50px black;
 }
-#intro {
+#intro p {
 	font-family: DroidSerif, Georgia, serif;
 }
 #main-header {
