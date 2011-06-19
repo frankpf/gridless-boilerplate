@@ -52,7 +52,7 @@ body {
 }
 /* Font settings */
 body, button, input, select, textarea {
-	font: 16px/1.625 PTSans, Helvetica, Arial, sans-serif;
+	font: 16px/1.625 DroidSerif, Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
 	*font-size: 1em; /* IE7 and older: IE can't resize px based text and most mobiles don't default the text to 16px */
 	color: #222; /* Black on white is too much contrast, #222 is a lot better */
 }
@@ -66,7 +66,7 @@ p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldse
 h1, h2, h3, h4, h5, h6 {
 	font-size: 1em;
 	font-weight: normal;
-	font-family: DroidSerif, Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+	font-family: PTSans, Helvetica, Arial, sans-serif;
 }
 h1 {
 	font-size: 4.25em; /* 68px */
@@ -308,8 +308,8 @@ body {
 	-khtml-box-shadow: inset 1px 1px 50px black;
 	box-shadow: inset 1px 1px 50px black;
 }
-#intro p {
-	font-family: DroidSerif, Georgia, serif;
+#intro p, nav, #demo p {
+	font-family: PTSans, Helvetica, Arial, sans-serif;
 }
 #main-header {
 	margin-top: 1.625em;
@@ -384,6 +384,8 @@ nav a:hover, #demo a:hover {
 @media only screen and (min-width: 1024px) { 
 	body {
 		width: 50%;
+		max-width: 530px;
+		*width: 530px;
 	}
 	nav {
 		font-size: 1.625em;
