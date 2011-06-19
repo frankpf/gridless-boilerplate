@@ -105,8 +105,6 @@ legend {
 }
 
 button, input, select, textarea {
-	font: 1em/1.625em Georgia, serif;
-	color: #222;
 	vertical-align: baseline;
 	*vertical-align: middle; /* IE7 and older */
 }
