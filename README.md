@@ -17,7 +17,7 @@ Main features
 - Optimal caching
 - HTML5 and CSS3 ready
 - [Safe CSS hacks](http://mathiasbynens.be/notes/safe-css-hacks) instead of conditional classnames/stylesheets
-- [Micro clearfix hack] [clearfix]
+- [Micro clearfix hack](http://nicolasgallagher.com/micro-clearfix-hack/)
 - A well-organized folder structure
 
 
@@ -95,13 +95,3 @@ Contributing
 ------------
 
 If you'd like to contribute to Gridless, visit https://github.com/thatcoolguy/gridless-boilerplate and send a pull request or an issue. You can also fork the project or clone it. Do anything, it's open-source!
-
-[one web]: http://adactio.com/journal/1716/
-[mobile first]: http://www.lukew.com/ff/entry.asp?933
-[responsive]: http://www.alistapart.com/articles/responsive-web-design
-[safe CSS hacks]: http://mathiasbynens.be/notes/safe-css-hacks
-[clearfix]: http://nicolasgallagher.com/micro-clearfix-hack/
-[respondjs]: https://github.com/scottjehl/Respond
-[normalize]: http://necolas.github.com/normalize.css/
-[100E2R]: http://www.informationarchitects.jp/en/100e2r/
-[vertical rhythm]: http://24ways.org/2006/compose-to-a-vertical-rhythm
