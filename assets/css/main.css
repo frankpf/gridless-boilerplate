@@ -275,6 +275,9 @@ sub {
 ---------------------------------------- */
 /* Centering pages without a wrapper: http://www.camendesign.com/code/developpeurs_sans_frontieres */
 /* The body will work like a 'div#wrapper': add the background of the page to the 'html' tag and the background of the wrapper to the 'body' tag */
+html {
+	background: #ffefd5;
+}
 body {
 	width: 92%;
 	margin: 0 auto;
