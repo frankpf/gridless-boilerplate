@@ -48,6 +48,7 @@ Folder structure
 Make it better
 --------------
 
+- Use a command line tool like [Juicer](https://github.com/cjohansen/juicer) to help you ship code for production and achieve better performance.
 - Use [HTML5 polyfills](http://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills) to bring future to all browsers
 - Use a tool like [resizeMyBrowser](http://resizemybrowser.com/) or [ProtoFluid](http://protofluid.com/) for testing your responsive designs on common browser widths
 - Consider using [CSS3 Please!](http://css3please.com/) and [CSSPrefixer](http://cssprefixer.appspot.com/) to help you write faster CSS3
