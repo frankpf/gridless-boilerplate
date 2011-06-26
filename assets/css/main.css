@@ -10,6 +10,13 @@
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
 	display: block;
 }
+audio[controls],
+canvas,
+video {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
 
 /* `Base structure
 ---------------------------------------- */
@@ -190,12 +197,15 @@ figure {
 }
 img, object, embed, video {
 	max-width: 100%; /* Consider this first: http://unstoppablerobotninja.com/entry/fluid-images/ */
-	width: 100%;
-	/* _width: width_of_the_imagepx; /* Do this if the image is smaller than the container. Since IE6 doesn't support max-width, it'll get the absolute width. Nice, huh? */
+	_width: 100%; /* If the image/video is smaller than the container, change the 100% to an absolute value */
 }
 img {
 	border: 0;
 	-ms-interpolation-mode: bicubic; /* Improve IE's resizing of images: http://css-tricks.com/ie-fix-bicubic-scaling-for-images */
+}
+/* Corrects overflow displayed oddly in IE9 */
+svg:not(:root) {
+	overflow: hidden;
 }
 
 /* `Abbreviations
