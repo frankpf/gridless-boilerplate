@@ -254,8 +254,9 @@ sub {
 	bottom: -0.25em;
 }
 
-/* `Clearfix hack: http://nicolasgallagher.com/micro-clearfix-hack/
+/* `Helper classes
 ---------------------------------------- */
+/* Micro clearfix hack: http://nicolasgallagher.com/micro-clearfix-hack/ */
 .cf:before, .cf:after { 
 	content: ""; 
 	display: table; 
