@@ -91,7 +91,7 @@ th {
 }
 tr, th, td {
 	padding-right: 1.625em;
-	border-bottom: 1px solid #333;
+	border-bottom: 0 solid #333;
 }
 
 /* `Forms
