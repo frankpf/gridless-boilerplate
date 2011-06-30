@@ -164,11 +164,11 @@ FAQ
 
 Because Gridless is ...well, gridless. It doesn't come any grid systems. The problem with most other CSS frameworks is that they include grid systems with presentational classes and/or ids without any semantic.
 
-In my opinion, grid systems are a great idea, but ***not*** in the way they're being used today — with **lots** of presentational classnames in the markup.
+In my opinion, grid systems are a great idea, but ***not*** in the way they're being used today — with **lots** of presentational classes like `span-x` in the markup.
 
 Grid systems can be used, but they should be:
 
-- Used with CSS preprocessors like [Sass](http://sass-lang.org)/[Compass](http://compass-style.org)
+- Used with CSS preprocessors like [Sass](http://sass-lang.com)/[Compass](http://compass-style.org), [LESS](http://lesscss.org), [PCSS](http://pcss.wiq.com.br/) etc.
 
 - Edited (modify the `class`es and `id`s) to suit each project's semantics
 
