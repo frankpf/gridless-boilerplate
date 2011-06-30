@@ -15,7 +15,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 audio[controls], canvas, video {
 	display: inline-block;
 	*display: inline;
-	zoom: 1;
+	*zoom: 1;
 }
 
 /* ======================================== 
