@@ -1,0 +1,71 @@
+/* 
+    Debugging styles: contains a baseline background image and debugging styles to help you see the structure of the markup
+*/
+
+/* ======================================== 
+   Debugging
+   Incompatible with: .debug-baseline
+   ======================================== */
+.debug-bg {
+    background: rgba(255, 0, 0, 1); /* Red */
+}
+.debug-bg * {
+    background: rgba(0, 255, 0, 1); /* Green */
+}
+.debug-bg * * {
+    background: rgba(0, 0, 255, 1); /* Blue */
+}
+ .debug-bg * * * {
+    background: rgba(255, 0, 0, .6); /* Red .6 */
+}
+.debug-bg * * * * {
+    background: rgba(0, 255, 0, .6); /* Green .6 */
+}
+.debug-bg * * * * * {
+    background: rgba(0, 0, 255, .6); /* Blue .6 */ 
+}
+.debug-bg * * * * * * {
+    background: rgba(255, 0, 0, .3); /* Red .3 */
+}
+.debug-bg * * * * * * * {
+    background: rgba(0, 255, 0, .3); /* Green .3 */
+}
+.debug-bg * * * * * * * * {
+    background: rgba(0, 0, 255, .3); /* Blue .3 */
+}
+/* With outlines */
+.debug-outline {
+    outline: 2px dotted rgba(255, 0, 0, 1); /* Red */
+}
+.debug-outline * {
+    outline: 2px dotted rgba(0, 255, 0, 1); /* Green */
+}
+.debug-outline * * {
+    outline: 2px dotted rgba(0, 0, 255, 1); /* Blue */
+}
+.debug-outline * * * {
+    outline: 2px dotted rgba(255, 0, 0, .6); /* Red .6 */
+}
+.debug-outline * * * * {
+    outline: 1px solid rgba(0, 255, 0, .6); /* Green .6 */
+}
+.debug-outline * * * * * {
+    outline: 1px solid rgba(0, 0, 255, .6); /* Blue .6 */
+}
+.debug-outline * * * * * * {
+    outline: 1px solid rgba(255, 0, 0, .3); /* Red .3 */
+}
+.debug-outline * * * * * * * {
+    outline: 1px solid rgba(0, 255, 0, .3); /* Green .3 */
+}
+.debug-outline * * * * * * * * {
+    outline: 1px solid rgba(0, 0, 255, .3); /* Blue .3 */
+}
+
+/* ======================================== 
+   Baseline grid
+   Incompatible with: .debug-bg
+   ======================================== */
+.debug-baseline, .debug-baseline body {
+    background: url('data:image/png;base64iVBORw0KGgoAAAANSUhEUgAAAAEAAAAaCAYAAAB2BDbRAAAAEElEQVQImWNgGEhwk4XrCAAEygGsuzqErAAAAABJRU5ErkJggg==') !important;
+}
