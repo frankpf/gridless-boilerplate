@@ -5,7 +5,7 @@ Gridless -- A boilerplate for responsive, cross-browser websites
 DESCRIPTION
 -----------
 
-Gridless is a HTML5 and CSS3, [one web](http://adactio.com/journal/1716/)boilerplate for [responsive](http://www.alistapart.com/articles/responsive-web-design), cross-browser websites.
+Gridless is a HTML5 and CSS3, [one web](http://adactio.com/journal/1716/) boilerplate for [responsive](http://www.alistapart.com/articles/responsive-web-design), cross-browser websites.
 
 Gridless encourages and uses [progressive enhancement](http://en.wikipedia.org/wiki/Progressive_Enhancement) through [mobile first](http://www.lukew.com/ff/entry.asp?933) responsive web design.
 
