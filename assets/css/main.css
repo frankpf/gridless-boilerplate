@@ -339,7 +339,6 @@ body {
 		-ms-filter: none !important;
 	}
 	a, a:visited {
-		color: #222 !important;
 		text-decoration: underline;
 	}
 	a[href]:after {
