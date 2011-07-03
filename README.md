@@ -162,9 +162,9 @@ FAQ
 
 ### WHY THE NAME GRIDLESS?
 
-Because Gridless is ...well, gridless. It doesn't come any grid systems. The problem with most other CSS frameworks is that they include grid systems with presentational classes and/or ids without any semantic.
+Because Gridless is ...well, gridless. It doesn't come with any grid systems.
 
-In my opinion, grid systems are a great idea, but ***not*** in the way they're being used today — with **lots** of presentational classes like `span-x` in the markup.
+In my opinion, grid systems are a great idea, but ***not*** in the way they're being used today — with **lots** of presentational classes like `span-x` or `grid_y` in the markup. These classes only describe the presentation of the content, nothing else. Markup should be semantic; it is meant to describe the **structure** of the content.
 
 Grid systems can be used, but they should be:
 
