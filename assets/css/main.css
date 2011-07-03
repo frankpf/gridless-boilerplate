@@ -1,26 +1,30 @@
 /*
-	Main stylesheet: contains CSS normalization, base styles, typography with a vertical rhythm and some mobile-first media queries
+	* Main stylesheet: contains CSS normalization, base styles, typography with a vertical rhythm and some mobile-first media queries
 
-	Credit is left where credit is due
-	Much content and inspiration was taken from the normalize.css project: http://necolas.github.com/normalize.css/ and https://github.com/jonathantneal/normalize.css
+	* Credit is left inline
+	* Much content and inspiration was taken from the normalize.css project:
+	* http://necolas.github.com/normalize.css/ and https://github.com/jonathantneal/normalize.css
+
+	* The media queries included in here are only placeholder. You should modify them as your content requires
 */
 
-/* ======================================== 
-   HTML5 elements display-role
-   ======================================== */
+/* ==========================================================================================> DEFAULT STYLES */
+
+/* Styles for all viewport widths and print */
+
+/* ============================================================> HTML5 ELEMENTS DISPLAY */
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
 	display: block;
 }
+
 audio[controls], canvas, video {
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
 }
 
-/* ======================================== 
-   Base structure
-   ======================================== */
+/* ============================================================> BASE STRUCTURE */
 
 html {
 	height: 100%;
@@ -28,54 +32,68 @@ html {
 	overflow-y: scroll; /* Force a scrollbar in non-IE */
 	-webkit-text-size-adjust: 100%; /* Remove iOS text size adjust without disabling user zoom */
 }
+
+/*
+	* The body will work like a 'div#wrapper' (for this to work, the 'body' needs to have a set width)
+
+	* To add a background to the PAGE, set it in the 'html' element
+	* To add a background to the WRAPPER, set it in the 'body' element
+*/
 body {
-	margin: 0;
+	margin: 0 auto;
 	min-height: 100%;
 }
+
 /* Font settings */
 body, button, input, select, textarea {
 	font: 16px/1.625 Georgia, serif;
-	*font-size: 1em; /* IE7 and older: IE can't resize px based text and most mobiles don't default the text to 16px */
+	*font-size: 1em; /* IE7 and older: IE can't resize px-based text and most mobiles don't default the text to 16px */
 	color: #333; /* Black on white is too much contrast, #333 is a lot better */
 }
-/* Add more elements as your project needs */
+
+/* Add more tags as your project needs */
 p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, h4, h5, h6, img {
 	margin: 0 0 1.625em;
 }
 
-/* ======================================== 
-   Headings and small
-   ======================================== */
+/* ============================================================> HEADINGS AND SMALL */
 
-/* Font sizes are based on the golden ratio of 16. See this for the modular scale: http://ow.ly/5jGl6. Line-heights and margins are adjusted to keep a 26px (1.625em) vertical rhythm across all elements */
+/* 
+	* Font sizes are based on the golden ratio of 16
+	* See this for the modular scale: ow.ly/5jGl6
+	* Line-heights and margins are adjusted to keep a 26px (1.625em) vertical rhythm across elements 
+*/
+
 h1, h2, h3, h4, h5, h6 {
 	font-size: 1em;
 	font-weight: normal;
 	color: #111; /* More contrast than body text for headings */
 }
+
 h1 {
 	font-size: 4.25em; /* 68px */
 	line-height: 1.1471em;
 	margin: 0 0 0.3824em;
 }
+
 h2 {
 	font-size: 2.625em; /* 42px */
 	line-height: 1.2381em;
 	margin: 0 0 0.619em;
 }
+
 h3 {
 	font-size: 1.625em; /* 26px */
 	line-height: 1em;
 	margin: 0 0 1em;
 }
+
 small {
 	font-size: 0.625em; /* 10px */
 	margin: 0 0 2.6em;
 }
 
-/* ======================================== 
-   Preformatted text and code
-   ======================================== */
+/* ============================================================> PREFORMATTED TEXT AND CODE */
 
 /* Allows line wrapping of 'pre' */
 pre {
@@ -83,187 +101,200 @@ pre {
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
+
 pre, code, kbd, samp {
 	font: 1em/1.625em Menlo, Consolas, 'DejaVu Sans Mono', Monaco, 'Courier New', Courier, monospace;
 }
 
-/* ======================================== 
-   Tables
-   ======================================== */
+/* ============================================================> TABLES */
 
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 th {
 	text-align: left;
 }
+
 tr, th, td {
 	padding-right: 1.625em;
 	border-bottom: 0 solid #333;
 }
 
-/* ======================================== 
-   Forms
-   ======================================== */
+/* ============================================================> FORMS */
 
 form {
 	margin: 0;
 }
+
 fieldset {
 	border: 0;
 	padding: 0;
 }
+
 textarea {
 	overflow: auto;
 	vertical-align: top;
 }
+
 legend {
 	*margin-left: -7px;
 }
+
 button, input, select, textarea {
 	vertical-align: baseline;
 	*vertical-align: middle; /* IE7 and older */
 }
+
 button, input {
 	line-height: normal;
 	*overflow: visible;
 }
+
 button, input[type="button"], input[type="reset"], input[type="submit"] {
 	cursor: pointer;
 	-webkit-appearance: button;
 }
+
 input[type="checkbox"], input[type="radio"] {
 	box-sizing: border-box;
 }
+
 input[type="search"] {
 	-webkit-appearance: textfield;
 	-moz-box-sizing: content-box;
 	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
 }
+
 input[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
+
 button::-moz-focus-inner, input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
 
-/* ======================================== 
-   Quotes
-   ======================================== */
+/* ============================================================> QUOTES */
 
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after, q:before, q:after {
 	content: '';
 	content: none;
 }
+
 blockquote, q, cite {
 	font-style: italic;
 }
+
 blockquote {
 	padding-left: 1.625em;
 	border-left: 3px solid #ccc;
 }
+
 blockquote > p {
 	padding: 0;
 }
 
-/* ======================================== 
-   Lists
-   ======================================== */
+/* ============================================================> LISTS */
 
 ul, ol {
 	list-style-position: inside;
 	padding: 0;
 }
+
 li ul, li ol {
 	margin: 0 1.625em;
 }
+
 dl dd {
 	margin-left: 1.625em;
 }
 
-/* ======================================== 
-   Links
-   ======================================== */
+/* ============================================================> LINKS */
 
 a {
 	text-decoration: none;
 }
+
 a:hover {
 	text-decoration: underline;
 }
+
 a:focus {
 	outline: thin dotted;
 }
+
 /* Better CSS outline suppression: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active {
 	outline: none;
 }
 
-/* ======================================== 
-   Visual media
-   ======================================== */
+/* ============================================================> VISUAL MEDIA */
 
 figure {
 	margin: 0;
 }
+
 img, object, embed, video {
-	max-width: 100%; /* Consider this first: http://unstoppablerobotninja.com/entry/fluid-images/ */
+	max-width: 100%; /* Consider this first: unstoppablerobotninja.com/entry/fluid-images/ */
 	_width: 100%; /* If the image/video is smaller than the container, change 100% to an absolute value */
 }
+
 img {
 	border: 0;
-	-ms-interpolation-mode: bicubic; /* Improve IE's resizing of images: http://css-tricks.com/ie-fix-bicubic-scaling-for-images */
+	-ms-interpolation-mode: bicubic; /* Improve IE's resizing of images: css-tricks.com/ie-fix-bicubic-scaling-for-images */
 }
+
 /* Corrects overflow displayed oddly in IE9 */
 svg:not(:root) {
 	overflow: hidden;
 }
 
-/* ======================================== 
-   Abbreviations
-   ======================================== */
+/* ============================================================> ABBREVIATIONS */
 
 abbr[title], dfn[title] {
 	border-bottom: 1px dotted #333;
 	cursor: help;
 }
 
-/* ========================================  
-   Marked/inserted/deleted text
-   ======================================== */
+/* ============================================================> MARKED/INSERTED/DELETED TEXT */
 
 ins, mark {
 	text-decoration: none;
 }
+
 mark {
 	background: #ff0;
 }
+
 ins {
 	background: #ff9;
 }
+
 del {
 	text-decoration: line-through;
 }
 
-/* ========================================  
-   Others
-   ======================================== */
+/* ============================================================> OTHERS */
 
 strong, b, dt {
 	font-weight: bold;
 }
+
 dfn {
 	font-style: italic;
 }
+
 var, address {
 	font-style: normal;
 }
+
 /* Position 'sub' and 'sup' without affecting line-height: gist.github.com/413930 */
 sub, sup {
 	font-size: 0.625em;
@@ -271,100 +302,119 @@ sub, sup {
 	position: relative;
 	vertical-align: baseline;
 }
+
 sup {
 	top: -0.5em;
 }
+
 sub {
 	bottom: -0.25em;
 }
 
-/* ========================================  
-   Helper classes
-   ======================================== */
+/* ============================================================> HELPER CLASSES */
 
-/* Micro clearfix hack: http://nicolasgallagher.com/micro-clearfix-hack/ */
-.cf:before, .cf:after { 
+/* 
+	* Micro clearfix hack
+	* More semantically titled with the class name 'group'
+
+	* Source: nicolasgallagher.com/micro-clearfix-hack/
+*/
+.group:before, .cf:after { 
 	content: ""; 
 	display: table; 
 }
-.cf:after { 
+
+.group:after { 
 	clear: both; 
 }
-.cf { 
+
+.group { 
 	*zoom: 1;
 }
 
-/* ========================================  
-   Placeholder media queries
-   Modify as content requires
-   ======================================== */
+/* ============================================================> PRIMARY STYLES */
 
-/* The body will work like a 'div#wrapper': add the background of the page to the 'html' tag and the background of the wrapper to the 'body' tag. Source: http://www.camendesign.com/code/developpeurs_sans_frontieres */
 
-/* Default styles */
-body {
-	width: 92%;
-	margin: 0 auto;
-}
 
-/* Wide mobile styles */
+
+
+
+
+
+
+
+/* ==========================================================================================> SCREEN-ONLY WIDE MOBILE (480px+) STYLES */
+
 @media only screen and (min-width: 480px) {
 	body {
 		
 	}
 }
 
-/* Tablets/netbooks styles */
+/* ==========================================================================================> SCREEN-ONLY TABLETS/NETBOOKS (768px+) STYLES */
+
 @media only screen and (min-width: 768px) { 
 	body {
 		
 	}
 }
 
-/* Desktop devices styles */
+/* ==========================================================================================> SCREEN-ONLY DESKTOPS (1024px+) STYLES */
+
 @media only screen and (min-width: 1024px) { 
 	body {
 
 	}
 }
 
-/* Print styles
----------------------------------------- */
+/* ==========================================================================================> PRINT-ONLY STYLES */
+
+/* Print styles inlined to avoid extra HTTP connection */
+
 @media print {
 	* {
 		background: transparent !important;
-		color: black !important; /* The woes of CSS color in print typography: sanbeiji.com/archives/953 */
+		color: black !important; /* Black prints faster: sanbeiji.com/archives/953 */
 		text-shadow: none !important;
 		filter: none !important;
 		-ms-filter: none !important;
 	}
+
 	a, a:visited {
 		text-decoration: underline;
 	}
+
 	a[href]:after {
 		content: " (" attr(href) ")";
 	}
+
 	abbr[title]:after {
 		content: " (" attr(title) ")";
 	}
+
 	/* Do not show javascript and internal links */
 	a[href^="javascript:"]:after, a[href^="#"]:after {
 		content: ""; 
 	}
+
 	/* Printing Tables: css-discuss.incutio.com/wiki/Printing_Tables */
 	thead {
 		display: table-header-group;
 	}
+
 	tr, img {
 		page-break-inside: avoid;
 	}
+
 	@page {
 		margin: 0.5cm;
 	}
+
 	p, h2, h3 {
 		orphans: 3;
 		widows: 3;
 	}
+
 	h2, h3 {
 		page-break-after: avoid;
 	}
