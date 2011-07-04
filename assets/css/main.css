@@ -253,7 +253,7 @@ figure {
 
 img, object, embed, video {
 	max-width: 100%; /* Consider this first: unstoppablerobotninja.com/entry/fluid-images/ */
-	_width: 100%; /* If the image/video is smaller than the container, change 100% to an absolute value */
+	_width: 100%; /* IE6 doesn't support max-width, so we just use width: 100%. If the image/video is smaller than the container, change 100% to an absolute value */
 }
 
 img {
