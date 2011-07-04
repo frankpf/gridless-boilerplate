@@ -6,6 +6,10 @@
 	* http://necolas.github.com/normalize.css/ and https://github.com/jonathantneal/normalize.css
 
 	* The media queries included in here are only placeholder. You should modify them as your content requires
+
+	* Across this document we use safe CSS hacks to target IE6 and IE7
+	* Selectors beggining with an underscore (_selector: property) target only IE6.
+	* Selectors beggining with an asterisk (*selector: property) target only IE6 and IE7.
 */
 
 /* ==========================================================================================> DEFAULT STYLES */
@@ -53,7 +57,7 @@ body {
 */
 body, button, input, select, textarea {
 	font: 16px/1.625 Georgia, serif;
-	*font-size: 1em; /* IE7 and older: IE can't resize px-based text and most mobiles don't default the text to 16px */
+	_font-size: 1em; /* IE6 can't resize px-based text and most mobiles don't default the text to 16px */
 	color: #333; /* Black on white is too much contrast, #333 is a lot better */
 }
 
@@ -150,7 +154,7 @@ legend {
 
 button, input, select, textarea {
 	vertical-align: baseline;
-	*vertical-align: middle; /* IE7 and older */
+	*vertical-align: middle;
 }
 
 button, input {
