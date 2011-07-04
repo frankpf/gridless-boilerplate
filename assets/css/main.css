@@ -325,7 +325,7 @@ sub {
 
 	* Source: nicolasgallagher.com/micro-clearfix-hack/
 */
-.group:before, .cf:after { 
+.group:before, .group:after { 
 	content: ""; 
 	display: table; 
 }
