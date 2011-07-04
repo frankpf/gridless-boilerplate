@@ -26,6 +26,12 @@ audio[controls], canvas, video {
 
 /* ============================================================> BASE STRUCTURE */
 
+/*
+	* The body will work like a 'div#wrapper' (for this to work, the 'body' needs to have a set width)
+
+	* To add a background to the PAGE, set it in the 'html' element
+	* To add a background to the WRAPPER, set it in the 'body' element
+*/
 html {
 	height: 100%;
 	font-size: 100%;
@@ -33,18 +39,18 @@ html {
 	-webkit-text-size-adjust: 100%; /* Remove iOS text size adjust without disabling user zoom */
 }
 
-/*
-	* The body will work like a 'div#wrapper' (for this to work, the 'body' needs to have a set width)
-
-	* To add a background to the PAGE, set it in the 'html' element
-	* To add a background to the WRAPPER, set it in the 'body' element
-*/
 body {
 	margin: 0 auto;
 	min-height: 100%;
 }
 
-/* Font settings */
+/* 
+	* Font settings
+	
+	* Based on the 100% Easy-2-Read standard and Relative readability:
+	* http://www.informationarchitects.jp/en/100e2r/
+	* http://www.wilsonminer.com/posts/2008/oct/20/relative-readability/
+*/
 body, button, input, select, textarea {
 	font: 16px/1.625 Georgia, serif;
 	*font-size: 1em; /* IE7 and older: IE can't resize px-based text and most mobiles don't default the text to 16px */
