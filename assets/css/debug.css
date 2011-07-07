@@ -1,6 +1,10 @@
 /* 
     * Debugging styles: contains a baseline background image and debugging styles to help you see the structure of the markup
 
+    * Add these classes to your 'html' tag:
+    * '.debug-bg' and '.debug-outline' to see the structure of your markup through backgrounds and outlines, respectively 
+    * '.debug-baseline' to see the 26px vertical rhythm
+
     * Incompatibility:
     * .debug-bg is incompatible with .debug-baseline and vice-versa
 */
