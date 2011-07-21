@@ -117,9 +117,6 @@ under
 	- Placeholder media queries for responsive web design
 	- [Safe CSS hacks](http://mathiasbynens.be/notes/safe-css-hacks) to target IE6 and IE7
 
-- debug.css:
-	- Styles to debug your markup
-
 
 MAKE IT BETTER
 --------------
