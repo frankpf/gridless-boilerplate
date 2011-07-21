@@ -5,7 +5,7 @@ Gridless -- A boilerplate for responsive, cross-browser websites
 DESCRIPTION
 -----------
 
-Gridless is a HTML5 and CSS3, [one web](http://adactio.com/journal/1716/) boilerplate for [responsive](http://www.alistapart.com/articles/responsive-web-design), cross-browser websites.
+Gridless is an optionated HTML5 and CSS3 boilerplate for making [mobile first](http://www.lukew.com/ff/entry.asp?933) [responsive](http://www.alistapart.com/articles/responsive-web-design), cross-browser websites with [beautiful typography](http://www.informationarchitects.jp/en/100e2r/).
 
 Gridless encourages and uses [progressive enhancement](http://en.wikipedia.org/wiki/Progressive_Enhancement) through [mobile first](http://www.lukew.com/ff/entry.asp?933) responsive web design.
 
@@ -17,18 +17,21 @@ PHILOSOPHY
 
 Some of the core principles of Gridless:
 
-### RESPONSIVE
+### DBY (Don't Bore Yourself) approach
 
-Gridless uses [responsive web design](http://www.alistapart.com/articles/responsive-web-design) to serve each user a design that responds to the size of their browser window. This means Gridless will work anywhere: old feature phones, smartphones, laptops, netbooks, desktops etc.
+Gridless takes the boring parts of making websites and webapps out. It comes packed with everything you're tired of doing in every new project: [CSS normalization](http://necolas.github.com/normalize.css/), [beautiful typography](http://www.informationarchitects.jp/en/100e2r/), a well-organized folder structure, [IE bugfixes](http://mathiasbynens.be/notes/safe-css-hacks) and other nice tricks.
 
-Gridless encourages and uses progressive enhancement. Its media queries are mobile first, which means they start from mobile and go building up to desktop sizes.
+### Progressive responsiveness
 
-### SIMPLE
+Gridless uses [mobile first](http://www.lukew.com/ff/entry.asp?933) [responsive web design](http://www.alistapart.com/articles/responsive-web-design) to adapt itself to the device's width. This means it'll work anywhere: old feature phones, newer smartphones, tablets, notebooks and bigger desktops. IE6/7/8 don't support media queries, so we use [Respond.js](https://github.com/scottjehl/Respond/) to polyfill that.
 
-Gridless is extremely simple and straightforward.
+### Agnostic starting point
 
-It isn't littered with with non-semantic classes or pre-made grid systems ( hence the name 'Gridless').
+Gridless is extremely simple and straightforward. It doesn't comes with any predefined grid systems ([and here's why you shouldn't even be using them](#)) or non-semantic classes. Gridless is meant to be a starting point, which should be edited, tweaked and overwritten to suit each project's design requirements.
 
+### Well documented
+
+What's a good library without good documentation? Gridless has [awesome documentation](http://gridless.io/docs/) so if you're going mad trying to understand something, just [check it out](http://gridless.io/docs/).
 
 MAIN FEATURES
 -------------
@@ -154,7 +157,10 @@ Some tips to improve Gridless *and* your productivity:
 ```
 
 
+CURRENT STATUS
+--------------
 
+Gridless is under active development. Its current version is 2.0.
 
 
 FAQ
@@ -177,9 +183,6 @@ Grid systems can be used, but they should be:
 Still, if you don't agree with that, just include your favorite grid system (only the grid part, remove the reset, typography etc.) and it'll work like a charm!
 
 
-
-
-
 LICENSE
 -------
 
@@ -196,16 +199,10 @@ LICENSE
 	* [The Unlicense](http://unlicense.org/)
 
 
-
-
-
 THANKS
 ------
 
 [Ethan Marcotte](http://ethanmarcotte.com/), [Bryan Rieger](http://yiibu.com/), [Luke Wroblewski](http://www.lukew.com/), [Jeremy Keith](http://adactio.com/), [Paul Irish](http://paulirish.com/), [Nicolas Gallagher](http://nicolasgallagher.com/), [Jonathan Neal](https://github.com/jonathantneal/), [Scott Jehl](http://www.scottjehl.com/), [Eric Meyer](http://meyerweb.com), [Oliver Reichenstein](http://www.informationarchitects.jp/), [Wilson Miner](http://www.wilsonminer.com/), [Harry Roberts](http://csswizardry.com/), [Mathias Bynens](http://mathiasbynens.be), [Kroc Camen](http://camendesign.com/), [Chris Coyier](http://css-tricks.com/), [Richard Rutter](http://clagnut.com/), [Remy Sharp](http://remysharp.com/), [Kilian Valkhof](kilianvalkhof.com) and many others.
-
-
-
 
 
 CONTRIBUTING

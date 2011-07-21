@@ -1,34 +1,42 @@
 /*
-	* Main stylesheet: contains CSS normalization, base styles, typography with a vertical rhythm and some mobile-first media queries
+	* Gridless version 2.0
 
-	* Credit is left inline
-	* Much content and inspiration was taken from the normalize.css project:
-	* http://necolas.github.com/normalize.css/ and https://github.com/jonathantneal/normalize.css
+	* Credit is left inline and big thanks to Nicolas Gallagher and Jonathan Neal
 
-	* The media queries included in here are only placeholder. You should modify them as your content requires
-
-	* Across this document we use safe CSS hacks to target IE6 and IE7
-	* Selectors beggining with an underscore (_selector: property) target only IE6.
-	* Selectors beggining with an asterisk (*selector: property) target only IE6 and IE7.
+	* Across this document we use safe CSS hacks: http://mathiasbynens.be/notes/safe-css-hacks
+	* Selectors beggining with an underscore (_selector: property) target only IE6
+	* Selectors beggining with an asterisk (*selector: property) target only IE6 and IE7
 */
 
-/* ==========================================================================================> DEFAULT STYLES */
+/* HTML5 elements display
+---------------------------------------- */
 
-/* Styles for all viewport widths and print */
-
-/* ============================================================> HTML5 ELEMENTS DISPLAY */
-
+/* Corrects block display not defined in IE6/7/8 and FF3 */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
 	display: block;
 }
 
+/*
+	* Corrects inline-block not defined in IE6/7/8 and FF3 
+	* Known limitation: 'audio[controls]' won't work in IE6
+*/
 audio[controls], canvas, video {
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
 }
 
-/* ============================================================> BASE STRUCTURE */
+/*
+	* Addresses styling not present IE6/7/8/9, FF3, S4
+	* Ensures content is hidden from all presentations, including screenreaders
+*/
+[hidden] {
+	display: none;
+	visibility: hidden;
+}
+
+/* Base structure
+---------------------------------------- */
 
 /*
 	* The body will work like a 'div#wrapper' (for this to work, the 'body' needs to have a set width)
@@ -40,7 +48,8 @@ html {
 	height: 100%;
 	font-size: 100%;
 	overflow-y: scroll; /* Force a scrollbar in non-IE */
-	-webkit-text-size-adjust: 100%; /* Remove iOS text size adjust without disabling user zoom */
+	-webkit-text-size-adjust: 100%; /* Prevent iOS text size adjust on orientation change without disabling user zoom */
+	-ms-text-size-adjust: 100%;
 }
 
 body {
@@ -48,25 +57,19 @@ body {
 	min-height: 100%;
 }
 
-/*
-	* Font settings
-
-	* Based on the 100% Easy-2-Read standard and Relative readability:
-	* http://www.informationarchitects.jp/en/100e2r/
-	* http://www.wilsonminer.com/posts/2008/oct/20/relative-readability/
-*/
+/* Fonts settings based on the 100E2R standard: http://www.informationarchitects.jp/en/100e2r/ */
 body, button, input, select, textarea {
-	font: 16px/1.625 Georgia, serif;
-	_font-size: 1em; /* IE6 can't resize px-based text and most mobiles don't default the text to 16px */
+	font: 1em/1.625 Georgia, serif;
 	color: #333; /* Black on white is too much contrast, #333 is a lot better */
 }
 
-/* Add more tags as your project needs */
-p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, h4, h5, h6, img {
+/* Add and/or remove tags as your baseline grid needs */
+p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, h4, h5, h6, img, figure, figcaption, button, hr {
 	margin: 0 0 1.625em;
 }
 
-/* ============================================================> HEADINGS AND SMALL */
+/* Headings/small
+---------------------------------------- */
 
 /*
 	* Font sizes are based on the golden ratio of 16
@@ -75,9 +78,9 @@ p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldse
 */
 
 h1, h2, h3, h4, h5, h6 {
+	font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', FreeSerif, Georgia, serif;
 	font-size: 1em;
-	font-weight: normal;
-	color: #111; /* More contrast than body text for headings */
+	font-weight: bold;
 }
 
 h1 {
@@ -103,7 +106,8 @@ small {
 	margin: 0 0 2.6em;
 }
 
-/* ============================================================> PREFORMATTED TEXT AND CODE */
+/* Preformatted text and code
+---------------------------------------- */
 
 /* Allows line wrapping of 'pre' */
 pre {
@@ -116,7 +120,8 @@ pre, code, kbd, samp {
 	font: 1em/1.625em Menlo, Consolas, 'DejaVu Sans Mono', Monaco, 'Courier New', Courier, monospace;
 }
 
-/* ============================================================> TABLES */
+/* Tables
+---------------------------------------- */
 
 table {
 	border-collapse: collapse;
@@ -129,10 +134,10 @@ th {
 
 tr, th, td {
 	padding-right: 1.625em;
-	border-bottom: 0 solid #333;
 }
 
-/* ============================================================> FORMS */
+/* Forms
+---------------------------------------- */
 
 form {
 	margin: 0;
@@ -187,7 +192,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	padding: 0;
 }
 
-/* ============================================================> QUOTES */
+/* Quotes
+---------------------------------------- */
 
 blockquote, q {
 	quotes: none;
@@ -204,14 +210,15 @@ blockquote, q, cite {
 
 blockquote {
 	padding-left: 1.625em;
-	border-left: 3px solid #ccc;
+	border-left: 1px solid #ddd;
 }
 
 blockquote > p {
 	padding: 0;
 }
 
-/* ============================================================> LISTS */
+/* Lists
+---------------------------------------- */
 
 ul, ol {
 	list-style-position: inside;
@@ -226,14 +233,16 @@ dl dd {
 	margin-left: 1.625em;
 }
 
-/* ============================================================> LINKS */
+/* Links
+---------------------------------------- */
 
-a {
+a, a:visited {
 	text-decoration: none;
+	color: #06c;
 }
 
 a:hover {
-	text-decoration: underline;
+	border-bottom: 1px solid;
 }
 
 a:focus {
@@ -245,15 +254,19 @@ a:hover, a:active {
 	outline: none;
 }
 
-/* ============================================================> VISUAL MEDIA */
+/* Figures
+---------------------------------------- */
 
 figure {
 	margin: 0;
 }
 
-img, object, embed, video {
-	max-width: 100%; /* Consider this first: unstoppablerobotninja.com/entry/fluid-images/ */
-	_width: 100%; /* IE6 doesn't support max-width, so we just use width: 100%. If the image/video is smaller than the container, change 100% to an absolute value */
+/* Embedded content
+---------------------------------------- */
+
+img, object, video {
+	max-width: 100%; /* Automatically scales images larger than the container. Consider this first: http://unstoppablerobotninja.com/entry/fluid-images/ */
+	/* _width: 100%; /* IE6 doesn't support max-width, so we just use width. If the image is larger than the container, just uncomment this. If it is smaller than the container, uncomment and change the 100% value to an absolute one */
 }
 
 img {
@@ -266,24 +279,23 @@ svg:not(:root) {
 	overflow: hidden;
 }
 
-/* ============================================================> ABBREVIATIONS */
+/* Abbreviations
+---------------------------------------- */
 
 abbr[title], dfn[title] {
-	border-bottom: 1px dotted #333;
+	border-bottom: 1px dotted;
 	cursor: help;
 }
 
-/* ============================================================> MARKED/INSERTED/DELETED TEXT */
-
-ins, mark {
-	text-decoration: none;
-}
+/* Marked/inserted/deleted text
+---------------------------------------- */
 
 mark {
 	background: #ff0;
 }
 
 ins {
+	text-decoration: none;
 	background: #ff9;
 }
 
@@ -291,7 +303,15 @@ del {
 	text-decoration: line-through;
 }
 
-/* ============================================================> OTHERS */
+/* Others
+---------------------------------------- */
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-bottom: 1px solid #ddd;
+}
 
 strong, b, dt {
 	font-weight: bold;
@@ -321,12 +341,11 @@ sub {
 	bottom: -0.25em;
 }
 
-/* ============================================================> HELPER CLASSES */
+/* Helper classes
+---------------------------------------- */
 
 /*
-	* Micro clearfix hack
-	* More semantically titled with the class name 'group'
-
+	* Micro clearfix hack, more semantically titled with 'group'
 	* Source: nicolasgallagher.com/micro-clearfix-hack/
 */
 .group:before, .group:after {
@@ -342,7 +361,8 @@ sub {
 	*zoom: 1;
 }
 
-/* ============================================================> PRIMARY STYLES */
+/* Primary styles
+---------------------------------------- */
 
 
 
@@ -352,32 +372,25 @@ sub {
 
 
 
+/* Media queries
+---------------------------------------- */
 
-/* ==========================================================================================> SCREEN-ONLY WIDE MOBILE (480px+) STYLES */
+/* The media queries included in here are only placeholder. Modify them as your content requires */
 
 @media only screen and (min-width: 480px) {
-	body {
-		
-	}
+	/* Wide mobile (480px+) styles go here */
 }
-
-/* ==========================================================================================> SCREEN-ONLY TABLETS/NETBOOKS (768px+) STYLES */
 
 @media only screen and (min-width: 768px) { 
-	body {
-		
-	}
+	/* Tablets/netbooks (768px+) styles go here */
 }
-
-/* ==========================================================================================> SCREEN-ONLY DESKTOPS (1024px+) STYLES */
 
 @media only screen and (min-width: 1024px) { 
-	body {
-
-	}
+	/* Desktops (1024px+) styles go here */
 }
 
-/* ==========================================================================================> PRINT-ONLY STYLES */
+/* Print styles
+---------------------------------------- */
 
 /* Print styles inlined to avoid extra HTTP connection */
 
