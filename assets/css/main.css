@@ -154,6 +154,7 @@ textarea {
 }
 
 legend {
+	border: 0;
 	*margin-left: -7px;
 }
 
