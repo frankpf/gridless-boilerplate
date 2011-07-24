@@ -1,234 +1,359 @@
 /*
-	Main stylesheet: contains CSS normalization, base styles, typography with a vertical rhythm and some mobile-first media queries
+	* Gridless version 2.0.0
 
-	Credit is left where credit is due
-	Much content and inspiration was taken from the normalize.css project: http://necolas.github.com/normalize.css/ and https://github.com/jonathantneal/normalize.css
+
+	* Credit is left inline and big thanks to Nicolas Gallagher and Jonathan Neal
+
+	* Across this document we use safe CSS hacks: http://mathiasbynens.be/notes/safe-css-hacks
+	* Selectors beggining with an underscore (_selector: property) target only IE6
+	* Selectors beggining with an asterisk (*selector: property) target only IE6 and IE7
 */
 
-/* `HTML5 elements display-role
+/* HTML5 elements display
 ---------------------------------------- */
+
+/* Corrects block display not defined in IE6/7/8 and FF3 */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
 	display: block;
 }
 
-/* `Base structure
+/*
+	* Corrects inline-block not defined in IE6/7/8 and FF3 
+	* Known limitation: 'audio[controls]' won't work in IE6;
+*/
+audio[controls], canvas, video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+/*
+	* Addresses styling not present IE6/7/8/9, FF3, S4
+	* Ensures content is hidden from all presentations, including screenreaders
+*/
+[hidden] {
+	display: none;
+	visibility: hidden;
+}
+
+/* Base structure
 ---------------------------------------- */
+
+/*
+	* The body will work like a 'div#wrapper' (for this to work, the 'body' needs to have a set width)
+
+	* To add a background to the PAGE, set it in the 'html' element
+	* To add a background to the WRAPPER, set it in the 'body' element
+*/
+
 html {
 	height: 100%;
 	font-size: 100%;
 	overflow-y: scroll; /* Force a scrollbar in non-IE */
-	-webkit-text-size-adjust: 100%; /* Remove iOS text size adjust without disabling user zoom */
+	-webkit-text-size-adjust: 100%; /* Prevent iOS text size adjust on orientation change without disabling user zoom */
+	-ms-text-size-adjust: 100%;
+	background: #fff0d6;
 }
+
 body {
-	margin: 0;
+	width: 98%;
+	margin: 0 auto;
 	min-height: 100%;
+	padding-top: 2.625em;
+	max-width: 1140px;
+
 }
-/* Font settings */
+
+body:before {
+	display: block;
+	color: black;
+	position: absolute;
+	top: 0;
+	height: 10px;
+	left: 0;
+	width: 100%;
+	background: #582489;
+	content: "";
+}
+
+/* Fonts settings based on the 100E2R standard: http://www.informationarchitects.jp/en/100e2r/ */
 body, button, input, select, textarea {
-	font: 16px/1.625 Georgia, serif;
-	*font-size: 1em; /* IE7 and older: IE can't resize px based text and most mobiles don't default the text to 16px */
-	color: #333; /* Black on white is too much contrast, #222 is a lot better */
+	font: 1em/1.625 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #333; /* Black on white is too much contrast, #333 is a lot better */
 }
-p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, h4, h5, h6, img {
+
+p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldset, menu, h4, h5, h6, img, figure, figcaption, button, hr, header {
 	margin: 0 0 1.625em;
 }
 
-/* `Headings and small
+/* Headings/small
 ---------------------------------------- */
-/* Font sizes are based on the golden ratio of 16. See this for the modular scale: http://ow.ly/5jGl6. Line-heights and margins are adjusted to keep a 26px (1.625em) vertical rhythm across all elements */
+
+/*
+	* Font sizes are based on the golden ratio of 16
+	* See this for the modular scale: ow.ly/5jGl6
+	* Line-heights and margins are adjusted to keep a 26px (1.625em) vertical rhythm across elements 
+*/
+
 h1, h2, h3, h4, h5, h6 {
 	font-size: 1em;
-	font-weight: normal;
+	font-weight: bold;
+	text-shadow: 0px 1px 0px white;
 }
+
 h1 {
 	font-size: 4.25em; /* 68px */
 	line-height: 1.1471em;
 	margin: 0 0 0.3824em;
 }
+
 h2 {
 	font-size: 2.625em; /* 42px */
 	line-height: 1.2381em;
 	margin: 0 0 0.619em;
 }
-h3 {
+
+h3, button {
 	font-size: 1.625em; /* 26px */
 	line-height: 1em;
 	margin: 0 0 1em;
 }
-small {
+
+small, footer {
 	font-size: 0.625em; /* 10px */
 	margin: 0 0 2.6em;
 }
 
-/* `Code
+/* Preformatted text and code
 ---------------------------------------- */
+
 /* Allows line wrapping of 'pre' */
 pre {
 	white-space: pre;
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
+
 pre, code, kbd, samp {
-	font: 1em/1.625em Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace;
+	font: 1em/1.625em Menlo, Consolas, 'DejaVu Sans Mono', Monaco, 'Courier New', Courier, monospace;
 }
 
-/* `Tables
+/* Tables
 ---------------------------------------- */
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 th {
 	text-align: left;
 }
+
 tr, th, td {
 	padding-right: 1.625em;
-	border-bottom: 1px solid #333;
 }
 
-/* `Forms
+/* Forms
 ---------------------------------------- */
+
 form {
 	margin: 0;
 }
+
 fieldset {
 	border: 0;
 	padding: 0;
 }
+
 textarea {
 	overflow: auto;
 	vertical-align: top;
 }
+
 legend {
 	*margin-left: -7px;
 }
 
 button, input, select, textarea {
 	vertical-align: baseline;
-	*vertical-align: middle; /* IE7 and older */
+	*vertical-align: middle;
 }
+
 button, input {
 	line-height: normal;
 	*overflow: visible;
 }
+
+button:active {
+	position: relative;
+	top: 2px;
+}
+
 button, input[type="button"], input[type="reset"], input[type="submit"] {
 	cursor: pointer;
 	-webkit-appearance: button;
 }
+
 input[type="checkbox"], input[type="radio"] {
 	box-sizing: border-box;
 }
+
 input[type="search"] {
 	-webkit-appearance: textfield;
 	-moz-box-sizing: content-box;
 	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
 }
+
 input[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
+
 button::-moz-focus-inner, input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
 
-/* `Quotes
+/* Quotes
 ---------------------------------------- */
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after, q:before, q:after {
 	content: '';
 	content: none;
 }
+
 blockquote, q, cite {
 	font-style: italic;
 }
+
 blockquote {
 	padding-left: 1.625em;
-	border-left: 3px solid #ccc;
+	border-left: 1px solid #ddd;
 }
+
 blockquote > p {
 	padding: 0;
 }
 
-/* `Lists
+/* Lists
 ---------------------------------------- */
+
 ul, ol {
 	list-style-position: inside;
 	padding: 0;
 }
+
 li ul, li ol {
 	margin: 0 1.625em;
 }
+
 dl dd {
 	margin-left: 1.625em;
 }
 
-/* `Hyperlinks
+/* Links
 ---------------------------------------- */
-a {
+
+a, a:visited {
 	text-decoration: none;
+	color: #777;
+	border-bottom: 2px solid #aaa;
 }
+
 a:hover {
-	text-decoration: underline;
+	color: black;
+	border-bottom: 2px solid #582489;
 }
+
 a:focus {
 	outline: thin dotted;
 }
+
 /* Better CSS outline suppression: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active {
 	outline: none;
 }
 
-/* `Visual media
+/* Figures
 ---------------------------------------- */
+
 figure {
 	margin: 0;
 }
-img, object, embed, video {
-	max-width: 100%; /* Consider this first: http://unstoppablerobotninja.com/entry/fluid-images/ */
-	width: 100%;
-	/* *width: width_of_the_imagepx; /* Do this if the image is larger than the container. Since IE doesn't support max-width, it'll get the absolute width. Nice, huh? */
-}
-img {
-	border: 0;
-	-ms-interpolation-mode: bicubic; /* Improve IE's resizing of images: http://css-tricks.com/ie-fix-bicubic-scaling-for-images */
+
+/* Embedded content
+---------------------------------------- */
+
+img, object, video {
+	max-width: 100%; /* Consider this first: unstoppablerobotninja.com/entry/fluid-images/ */
+	/* _width: 100%; /* Uncomment this: IE6 doesn't support max-width, so we use width: 100% for it. If the image/video is smaller than the container, change 100% to an absolute value */
 }
 
-/* `Abbreviations
+/*
+	* 1. Removes border when inside 'a' element in IE6/7/8/9
+	* 2. Improve IE's resizing of images: css-tricks.com/ie-fix-bicubic-scaling-for-images
+*/
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic; /* Improve IE's resizing of images: css-tricks.com/ie-fix-bicubic-scaling-for-images */
+}
+
+/* Corrects overflow displayed oddly in IE9 */
+svg:not(:root) {
+	overflow: hidden;
+}
+
+/* Abbreviations
 ---------------------------------------- */
+
 abbr[title], dfn[title] {
-	border-bottom: 1px dotted #333;
+	border-bottom: 1px dotted;
 	cursor: help;
 }
 
-/* `Marked/inserted and deleted text
+/* Marked/inserted/deleted text
 ---------------------------------------- */
-ins, mark {
-	text-decoration: none;
-}
+
 mark {
 	background: #ff0;
 }
+
 ins {
+	text-decoration: none;
 	background: #ff9;
 }
+
 del {
 	text-decoration: line-through;
 }
 
-/* `Others
+/* Others
 ---------------------------------------- */
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-bottom: 1px solid #aaa;
+}
+
 strong, b, dt {
 	font-weight: bold;
 }
+
 dfn {
 	font-style: italic;
 }
+
 var, address {
 	font-style: normal;
 }
+
 /* Position 'sub' and 'sup' without affecting line-height: gist.github.com/413930 */
 sub, sup {
 	font-size: 0.625em;
@@ -236,173 +361,224 @@ sub, sup {
 	position: relative;
 	vertical-align: baseline;
 }
+
 sup {
 	top: -0.5em;
 }
+
 sub {
 	bottom: -0.25em;
 }
 
-/* `Default (mobile) styles
+/* Helper classes
 ---------------------------------------- */
-/* Centering pages without a wrapper: http://www.camendesign.com/code/developpeurs_sans_frontieres */
-/* The body will work like a 'div#wrapper': add the background of the page to the 'html' tag and the background of the wrapper to the 'body' tag */
-html {
-	background: #ffefd5;
-}
-body {
-	width: 92%;
-	margin: 0 auto;
-	background: #ffefd5;
+
+/*
+	* Micro clearfix hack, more semantically titled with 'group'
+	* Source: nicolasgallagher.com/micro-clearfix-hack/
+*/
+.group:before, .group:after {
+	content: "";
+	display: table;
 }
 
-/* `Project-specific
+.group:after {
+	clear: both;
+}
+
+.group {
+	*zoom: 1;
+}
+
+/* Primary styles
 ---------------------------------------- */
-#demo p, #main-header h1 {
+
+#main-header:hover {
+	color: #582489;
+}
+
+#main-nav, #main-header {
 	text-align: center;
 }
-#demo p, #intro p {
-	font-size: 1.625em; /* 26px */
-	line-height: 1em;
-	margin: 0 0 1em;
+
+#main-nav {
+	margin-top: 1em;
 }
-#demo p:active, #demo p:focus {
-	position: relative;
-	top: 3px;
-	background-color: #555;
-}
-#demo p, pre {
-	padding: 26px;
-	color: white;
-	background-color: #333;
-	border-radius: 20px;
-	-moz-border-radius: 20px;
-	-khtml-border-radius: 20px;
-	border-radius: 20px;
-	-moz-box-shadow: inset 1px 1px 50px black;
-	-khtml-box-shadow: inset 1px 1px 50px black;
-	box-shadow: inset 1px 1px 50px black;
-}
-#main-header {
-	margin-top: 1.625em;
-}
-nav ul {
-	display: none;
+
+#main-nav li {
 	list-style: none;
-	text-align: left;
+	margin-left: 1.625em;
 }
-nav a, #demo a {
-	color: #BA0000;
+
+button, a, button:hover, a:hover, pre, pre:hover, #main-header, #main-header:hover {
+	-moz-transition: all linear 0.3s;
+	-webkit-transition: all linear 0.3s;
+	-o-transition: all linear 0.3s;
+	transition: all linear 0.3s;
 }
-nav a:hover, #demo a:hover {
-	text-decoration: none;
-	color: maroon;
+
+button {
+	width: 100%;
+	padding: 1em;
+	border: none;
+	margin: 0 0 2.625em;
 }
-::-moz-selection {
-	background: #B4D455; /* 1M THE B4D455 13373R */
-	color: white;
-}
-::selection {
-	background: #B4D455;
+
+button, pre {
+	border-radius: 0.5em;
+	background: #333;
 	color: white;
 }
 
-/* `Wide mobile devices styles
+button:hover, pre:hover {
+	background: #582489;
+	box-shadow: inset 1px 1px 20px black;
+}
+
+#download {
+	text-align: center;	
+}
+
+#features {
+	margin-top: 3em;
+}
+
+#features article {
+	margin-bottom: 3em;
+}
+
+#intro p {
+	font-weight: bold;
+}
+
+pre {
+	padding: 1.625em;
+}
+
+figure {
+	float: left;
+	margin-right: 3%;
+	font-size: 0.625em;
+	text-align: center;
+}
+
+#docs {
+	width: 50%;
+	font-family: Palatino, Georgia, serif;
+}
+
+/* Media queries
 ---------------------------------------- */
+
 @media only screen and (min-width: 480px) {
 	body {
-		width: 70%;
+		width: 90%;
 	}
-	#fork a {
-		background: url('https://d3nwyuy0nl342s.cloudfront.net/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67');
-		text-indent: -9999px;
-		position: fixed;
-		_position: absolute; /* IE6 only */
-		height: 149px;
-		width: 149px;
-		top: 0;
-		right: 0;
-		color: red;
-	} 
+
+	#main-nav {
+		font-size: 1.625em;
+	}
+
+	#main-nav li {
+		display: inline;
+	}
 }
 
-/* `Tablets/netbooks styles
----------------------------------------- */
 @media only screen and (min-width: 768px) { 
 	body {
-		width: 50%;
-	}
-	#main-header ul {
-		display: block;
-		position: fixed;
-		_position: absolute; /* IE6 only: IE6 doesn't support "position: fixed", so we define "position: absolute" as a fallback */
-		left: 30px;
-		top: 200px;
-		border-top: 1px solid #BA0000;
-	}
-	#main-header li {
-		border-bottom: 1px solid #BA0000;
-	}
-	nav a:hover {
-		border: none;
-	}
-	#demo p {
-		width: 40%;
+		width: 60%;
 	}
 }
 
-/* Desktop devices styles
----------------------------------------- */
+
 @media only screen and (min-width: 1024px) { 
 	body {
-		width: 50%;
-		max-width: 530px;
-		*width: 530px;
+		width: 90%;
 	}
-	nav {
+
+	#dby, #responsive, #intro, #download, #demo, #source, #support {
+		float: left;
+		width: 45%;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+	}
+
+	#simple {
+		width: 45%;
+		margin: 0 auto;
+	}
+
+	#main-header {
+		float: left;
+		margin-left: 5%;
+	}
+
+	#main-nav {
+		float: right;
 		font-size: 1.625em;
+		margin-top: 1em;
+		margin-right: 5%;
+	}
+
+	#main-nav li {
+		float: left;
+	}
+
+	button {
+		width: 100%;
 	}
 }
 
 /* Print styles
 ---------------------------------------- */
+
+/* Print styles inlined to avoid extra HTTP connection */
+
 @media print {
 	* {
 		background: transparent !important;
-		color: black !important; /* The woes of CSS color in print typography: sanbeiji.com/archives/953 */
+		color: black !important; /* Black prints faster: sanbeiji.com/archives/953 */
 		text-shadow: none !important;
 		filter: none !important;
 		-ms-filter: none !important;
 	}
+
 	a, a:visited {
-		color: #333 !important;
 		text-decoration: underline;
 	}
+
 	a[href]:after {
 		content: " (" attr(href) ")";
 	}
+
 	abbr[title]:after {
 		content: " (" attr(title) ")";
 	}
+
 	/* Do not show javascript and internal links */
 	a[href^="javascript:"]:after, a[href^="#"]:after {
 		content: ""; 
 	}
+
 	/* Printing Tables: css-discuss.incutio.com/wiki/Printing_Tables */
 	thead {
 		display: table-header-group;
 	}
+
 	tr, img {
 		page-break-inside: avoid;
 	}
+
 	@page {
 		margin: 0.5cm;
 	}
+
 	p, h2, h3 {
 		orphans: 3;
 		widows: 3;
 	}
-	h2, h3{
+
+	h2, h3 {
 		page-break-after: avoid;
 	}
 }
