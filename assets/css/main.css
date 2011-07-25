@@ -193,6 +193,11 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	padding: 0;
 }
 
+/* Reintroduce inner spacing in 'table' to avoid overlap and whitespace issues in IE6/7 */
+table button, table input {
+	*overflow: auto;
+}
+
 /* Quotes
 ---------------------------------------- */
 
