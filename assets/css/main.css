@@ -8,28 +8,25 @@
 	* Selectors beggining with an asterisk (*selector: property) target only IE6 and IE7
 */
 
-/* HTML5 elements display
+/* HTML5 display definitions
 ---------------------------------------- */
 
-/* Corrects block display not defined in IE6/7/8 and FF3 */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
 	display: block;
 }
 
-/*
-	* Corrects inline-block not defined in IE6/7/8 and FF3 
-	* Known limitation: 'audio[controls]' won't work in IE6
-*/
-audio[controls], canvas, video {
+/* Corrects inline-block not defined in IE6/7/8 and FF3 */
+audio, canvas, video {
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
 }
 
-/*
-	* Addresses styling not present IE6/7/8/9, FF3, S4
-	* Ensures content is hidden from all presentations, including screenreaders
-*/
+audio:not([controls]) {
+	display: none;
+}
+
+/* Ensures content is hidden from all presentations, including screenreaders */
 [hidden] {
 	display: none;
 	visibility: hidden;
