@@ -65,8 +65,6 @@ body {
 }
 
 body:before {
-	display: block;
-	color: black;
 	position: absolute;
 	top: 0;
 	height: 10px;
