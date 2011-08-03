@@ -57,7 +57,7 @@ body {
 /* Fonts settings based on the 100E2R standard: http://www.informationarchitects.jp/en/100e2r/ */
 body, button, input, select, textarea {
 	font: 1em/1.625 Georgia, serif;
-	color: #333; /* Black on white is too much contrast, #333 is a lot better */
+	color: #222; /* Full black on white is too much contrast, #222 is a better default */
 }
 
 /* Add and/or remove tags as your baseline grid needs */
