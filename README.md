@@ -77,7 +77,7 @@ FILES
 
 - **README.md**: the file you're reading right now
 
-- **index.html**: The HTML(5) page with the initial markup
+- **index.html**: The HTML(5) page with the initial markup and some tricks to get you started quickly
 
 - **demo.html**: A file demonstrating Gridless' styles
 
