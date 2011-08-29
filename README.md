@@ -27,11 +27,7 @@ Gridless uses [mobile first](http://www.lukew.com/ff/entry.asp?933) [responsive 
 
 ### Agnostic starting point
 
-Gridless is extremely simple and straightforward. It doesn't comes with any predefined grid systems ([and here's why you shouldn't even be using them](#)) or non-semantic classes. Gridless is meant to be a starting point, which should be edited, tweaked and overwritten to suit each project's design requirements.
-
-### Well documented
-
-What's a good library without good documentation? Gridless has [awesome documentation](http://gridless.io/docs/) so if you're going mad trying to understand something, just [check it out](http://gridless.io/docs/).
+Gridless is extremely simple and straightforward. It doesn't come with any predefined grid systems or non-semantic classes. Gridless is meant to be a starting point, which should be edited, tweaked and overwritten to suit each project's design requirements.
 
 MAIN FEATURES
 -------------
