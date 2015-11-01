@@ -5,7 +5,7 @@ Gridless -- A boilerplate for responsive, cross-browser websites
 DESCRIPTION
 -----------
 
-Gridless is an optionated HTML5 and CSS3 boilerplate for making [mobile first](http://www.lukew.com/ff/entry.asp?933) [responsive](http://www.alistapart.com/articles/responsive-web-design), cross-browser websites with [beautiful typography](http://www.informationarchitects.jp/en/100e2r/).
+Gridless is an opinionated HTML5 and CSS3 boilerplate for making [mobile first](http://www.lukew.com/ff/entry.asp?933) [responsive](http://www.alistapart.com/articles/responsive-web-design), cross-browser websites with [beautiful typography](http://www.informationarchitects.jp/en/100e2r/).
 
 Gridless encourages and uses [progressive enhancement](http://en.wikipedia.org/wiki/Progressive_Enhancement) through [mobile first](http://www.lukew.com/ff/entry.asp?933) responsive web design.
 
@@ -81,7 +81,7 @@ FILES
 
 - **humans.txt**: Give credit to people involved in the project
 
-- **UNLICENSE.txt**: The Unlicense, the license which Gridless is licensed 
+- **UNLICENSE.txt**: The Unlicense, the license which Gridless is licensed
 under
 
 - **favicon.ico, apple-touch-icon.png, apple-touch-icon-precomposed.png, apple-touch-icon-*-precomposed.png**: The favicons (bookmark icons)
