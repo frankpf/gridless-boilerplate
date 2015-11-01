@@ -11,7 +11,7 @@
 /* HTML5 display definitions
 ---------------------------------------- */
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
@@ -71,7 +71,7 @@ p, blockquote, q, pre, address, hr, code, samp, dl, ol, ul, form, table, fieldse
 /*
 	* Font sizes are based on the golden ratio of 16
 	* See this for the modular scale: ow.ly/5jGl6
-	* Line-heights and margins are adjusted to keep a 26px (1.625em) vertical rhythm across elements 
+	* Line-heights and margins are adjusted to keep a 26px (1.625em) vertical rhythm across elements
 */
 
 h1, h2, h3, h4, h5, h6 {
@@ -384,11 +384,11 @@ sub {
 	/* Wide mobile (480px+) styles go here */
 }
 
-@media only screen and (min-width: 768px) { 
+@media only screen and (min-width: 768px) {
 	/* Tablets/netbooks (768px+) styles go here */
 }
 
-@media only screen and (min-width: 1024px) { 
+@media only screen and (min-width: 1024px) {
 	/* Desktops (1024px+) styles go here */
 }
 
@@ -420,7 +420,7 @@ sub {
 
 	/* Do not show javascript and internal links */
 	a[href^="javascript:"]:after, a[href^="#"]:after {
-		content: ""; 
+		content: "";
 	}
 
 	/* Printing Tables: css-discuss.incutio.com/wiki/Printing_Tables */
